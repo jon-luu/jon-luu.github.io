@@ -1,41 +1,49 @@
 body {
-    background: #fff;
+    background: deepskyblue;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
 h1 {
-    color: deepskyblue;
     text-align: center;
-    margin: 20px 0;
+    color: #2b4c4c;
+    margin-top: 20px;
 }
 
-.about, .skills, .projects, .contact {
+.about, .skills, .projects {
     width: 90%;
-    margin: 0 auto 40px auto;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .project {
+    background: #6e7f8d;
     width: 28%;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 80px;
+    text-align: center;
+    color: white;
 }
 
 .project img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border: 3px solid #1c2d4a;
+    background: white;
 }
 
-.project h3 {
-    margin: 0;
+.project h3 a {
+    color: #2e008b;
+}
+
+.project p {
+    color: black;
+    margin-top: 8px;
 }
