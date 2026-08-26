@@ -1,32 +1,81 @@
 /* Structural */
 body {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    background:url(https://t3.ftcdn.net/jpg/04/22/84/12/360_F_422841241_OR69MNhNG3Sxl6pmrKwuoBZPaZpZLt1a.jpg);
-    background-size: cover;
+    font-family: "Trebuchet MS", Verdana, sans-serif; 
+    background-color: white; 
+    background:url(https://xmple.com/wallpaper/grey-streaks-stripes-lines-white-6016x3384-c2-d3d3d3-fdf5e6-l2-56-56-a-30-f-1.svg); 
+    color: #4d6487; 
+    margin: 0; 
 }
 
 #content {
-    background-color:rgba(255, 255, 255, 0.8);
-    width:70%;
-    padding:5px;
-    margin:auto;    /* center in the page */
-    border-radius:5px;
-    border: 1px solid navy;
-    box-shadow: 5px 5px white;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    border-radius: 0 0 10px 10px;
+    box-shadow: 8px 8px #C4772F; 
 }
 
 header, main, footer {
-    padding:5x;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 30px 40px; 
+    box-sizing: border-box; 
 }
 
-header, footer{
-    background-color:navy;
-    color:white;
+header {
+    background-color: #4d6487; /* blue banner background */
+    color: white; /* readable text against the blue */
+    margin-top: 50px; /* gap between the top of the page and the header */
+    border-radius: 10px 10px 0 0; /* rounds only the top corners, since main/footer sit directly below */
 }
-/* Naviation */
 
+main {
+    background-color: #FFFFFF; /* white body so the page content is easy to read */
+    border-left: 1px solid #D9E6E0; /* thin side borders so header/main/footer look like one connected card */
+    border-right: 1px solid #D9E6E0;
+}
+
+footer {
+    background-color: #4d6487; /* matches the header for a consistent top/bottom band */
+    color: white;
+    border-radius: 0 0 10px 10px; /* rounds only the bottom corners */
+}
+
+/* Navigation */
+a {
+    color: #C4772F; /* accent color instead of the default browser blue */
+    text-decoration: none; /* removes the default underline */
+}
+
+a:hover {
+    color: #4d6487; /* switches to the theme blue when hovered */
+    text-decoration: underline; /* underline comes back on hover as a hint that it's clickable */
+}
+
+footer a {
+    color: #F2D9B1; /* lighter shade so links stay readable on the dark footer background */
+}
 
 /* Typography */
 h1 {
-    color:blue;
+    color: white; /* page title, readable against the header's blue background */
+    margin: 0 0 8px; /* small gap below the title, none above it */
+}
+
+header h2 {
+    color: white; /* keeps the name in the header the same color as the title */
+    font-weight: normal; /* lighter weight so it doesn't compete with the bold h1 above it */
+    margin: 0; /* removes default heading margin */
+}
+
+main h2 {
+    color: #4d6487; /* section headings inside the page body use the theme blue */
+}
+
+p {
+    line-height: 1.6; /* extra space between lines makes paragraphs easier to read */
+}
+
+ul {
+    line-height: 1.9; /* extra spacing between list items */
+    padding-left: 20px; /* keeps the bullet points indented from the edge */
 }
