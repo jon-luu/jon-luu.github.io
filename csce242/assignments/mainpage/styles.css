@@ -10,7 +10,7 @@ body {
 #content {
     max-width: 1500px; 
     margin: 0 auto; 
-    border-radius: 0 0 10px 10px;
+    
     box-shadow: 8px 8px #C4772F; 
 }
 
@@ -22,27 +22,29 @@ header, main, footer {
 }
 
 header {
-    background-color: #4d6487; /* blue banner background */
-    color: white; /* readable text against the blue */
+    background-color: #4d6487; 
+    color: white; 
     margin-top: 50px; /* gap between the top of the page and the header */
-    border-radius: 10px 10px 0 0; /* rounds only the top corners, since main/footer sit directly below */
+    border-radius: 10px 10px 0 0; /* rounds only the top corners*/
+    box-shadow: 8px 8px #C4772F
 }
 
 main {
-    background-color: #FFFFFF; /* white body so the page content is easy to read */
+    background-color: #FFFFFF; 
     border-left: 1px solid #D9E6E0; /* thin side borders so header/main/footer look like one connected card */
     border-right: 1px solid #D9E6E0;
 }
 
 footer {
-    background-color: #4d6487; /* matches the header for a consistent top/bottom band */
+    background-color: #4d6487; 
     color: white;
     border-radius: 0 0 10px 10px; /* rounds only the bottom corners */
+    box-shadow: 8px 8px #C4772F
 }
 
 /* Navigation */
 a {
-    color: #C4772F; /* accent color instead of the default browser blue */
+    color: #C4772F; 
     text-decoration: none; /* removes the default underline */
 }
 
@@ -52,32 +54,26 @@ a:hover {
 }
 
 footer a {
-    color: #F2D9B1; /* lighter shade so links stay readable on the dark footer background */
+    color: #F2D9B1; 
 }
 
 /* Typography */
 h1 {
-    color: white; /* page title, readable against the header's blue background */
-    margin: 0 0 8px; /* small gap below the title, none above it */
+    color: white; 
+    margin: 0 0 8px;
 }
 
 header h2 {
-    color: white; /* keeps the name in the header the same color as the title */
-    font-weight: normal; /* lighter weight so it doesn't compete with the bold h1 above it */
-    margin: 0; /* removes default heading margin */
+    color: white; 
+    margin: 0; 
 }
 
 main h2 {
-    color: #4d6487; /* section headings inside the page body use the theme blue */
+    color: #4d6487;
 }
 
 p {
     line-height: 1.6; /* extra space between lines makes paragraphs easier to read */
-}
-
-ul {
-    line-height: 1.9; /* extra spacing between list items */
-    padding-left: 20px; /* keeps the bullet points indented from the edge */
 }
 
 /* Sections */
@@ -86,7 +82,7 @@ section h2 {
     margin: 30px 0 20px;
 }
 
-/* Flexbox card row - lays assignment/project cards out side by side */
+/* Flexbox card row, lays assignment/project cards out side by side */
 .card-row {
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +91,7 @@ section h2 {
 }
 
 .card {
-    background-color: #EAF0F8; /* light tint of the theme blue */
+    background-color: #EAF0F8;
     border: 1px solid #D9E6E0;
     border-radius: 6px;
     padding: 25px 30px 30px;
