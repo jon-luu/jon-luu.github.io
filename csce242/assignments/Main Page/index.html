@@ -1,31 +1,68 @@
 <!Doctype html>
-<html>
+<html lang="en">
     <head>
         <title>CSCE 242 Portfolio Page</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="content">
-            <header>
-                <h1>CSCE 242 Portfolio page</h1>
-                <h2>Jonathan Luu</h2>
-            </header>
-            <main>
-                <p>This is my portfolio page for CSCE 242, where I am posting the assignments I complete throughout the semester. an undergraduate 
-                    3-credit course titled Web Applications (historically known as Client-Server Computing). This course covers modern web technologies, 
-                    design methods, and programming tools used to build client-server software and interactive applications.</p>
+        <header id="page-header">
+            <p id="author">Jonathan Luu</p>
+            <h1>CSCE 242 Portfolio page</h1>
+            <p class="course-desc">This is my portfolio page for CSCE 242, where I am posting the assignments I complete throughout the semester. an undergraduate 
+                3-credit course titled Web Applications (historically known as Client-Server Computing). This course covers modern web technologies, 
+                design methods, and programming tools used to build client-server software and interactive applications.</p>
 
-                    <a id="repo-link" href="https://github.com/jon-luu/jon-luu.github.io/tree/main/csce242">View my GitHub repository</a>
+                <a id="repo-link" href="https://github.com/jon-luu/jon-luu.github.io/tree/main/csce242">View my GitHub repository</a>
+        </header>
 
+        <main id="content">
+
+            <section id="assignments">
                 <h2>Assignments</h2>
-                <ul>
-                    <li><a href="../01html/Titanic.html">Titanic</a></li>
-                    <li><a href="../02html/Lego.html">Lego</a></li>
-                </ul>
-            </main>
-            <footer>
-                <p>&copy; jonathanluu</p>
-            </footer>
-        </div>
+                <div class="card-row">
+
+                    <article class="card">
+                        <h3>Assignment 1 &ndash; Titanic</h3>
+                        <img src="images/titanic-screenshot.jpg" alt="The Story of the Titanic assignment page, with ship photos and a facts section" width="300" height="150">
+                        <p>My first HTML page, built around Titanic passenger data. It covers basic page structure, a header/main/footer layout, and a table of key facts about the ship.</p>
+                        <a class="card-link" href="../01html/Titanic.html">View assignment</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Assignment 2 &ndash; The History of Lego</h3>
+                        <img src="images/lego-screenshot.jpg" alt="How Lego Began assignment page, styled with a red banner and yellow brick background" width="300" height="150">
+                        <p>A styled page on how Lego got its start, from Ole Kirk Christiansen's carpentry shop to the patented brick design. Focused on custom CSS: color theming, a formatted content div, and a bordered table of key dates.</p>
+                        <a class="card-link" href="../02html/Lego.html">View assignment</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Assignment 3 &ndash; Portal Page Layout</h3>
+                        <img src="images/portal-screenshot.jpg" alt="Screenshot of this portal page's flexbox layout" width="300" height="150">
+                        <p>A redesign of this main portal page using Flexbox to lay out assignment and project cards, with a media query so the layout switches from a row to a stacked column on smaller screens.</p>
+                        <a class="card-link" href="../03html/index.html">View assignment</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="card-row">
+
+                    <article class="card">
+                        <h3>Semester Project &ndash; Topic Proposal</h3>
+                        <img src="images/project-screenshot.jpg" alt="Screenshot of the semester project" width="300" height="150">
+                        <p>Proposal outlining the topic and goals for my semester-long project in this course. More details and a working build will be added here as the project develops.</p>
+                        <a class="card-link" href="projects/part1/Proposal (1).pdf" >View topic PDF</a>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="site-footer">
+            <p>&copy; jonathanluu</p>
+        </footer>
     </body>
 </html>
