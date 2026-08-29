@@ -1,0 +1,209 @@
+/* ---------- Reset & base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eeead9;
+  color: #333;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #eeead9;
+  border-left: 4px solid #eeead9;
+  border-right: 4px solid #eeead9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Header ---------- */
+header.site-header {
+  background-color: #f0ecd4;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header.site-header h1 {
+  color: #4c7f80;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/* ---------- Nav ---------- */
+nav.main-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.main-nav .nav-item {
+  flex: 1;
+  text-align: center;
+  background-color: #d78885;
+  border: 1px solid #eeead9;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 18px 10px;
+  transition: background-color 0.2s ease;
+}
+
+nav.main-nav .nav-item:hover {
+  background-color: #c96f6c;
+}
+
+/* ---------- Content wrapper: sidebar + columns ---------- */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar */
+aside.sidebar {
+  flex: 0 0 200px;
+  background-color: #e8b7b9;
+  padding: 25px 15px;
+}
+
+aside.sidebar h2 {
+  color: #4c7f80;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+aside.sidebar .sidebar-link {
+  display: block;
+  background-color: #fdfcf7;
+  color: #d78885;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* Columns section */
+section.columns {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eeead9;
+}
+
+.column h3 {
+  background-color: #4c7f80;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.1rem;
+}
+
+.column img {
+  flex: 1;
+  object-fit: cover;
+}
+
+/* ---------- Idea rows ---------- */
+section.ideas {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-row {
+  display: flex;
+  flex-direction: row;
+  background-color: #5a8b8c;
+  border-top: 4px solid #eeead9;
+}
+
+.idea-img {
+  flex: 0 0 25%;
+  object-fit: cover;
+}
+
+.idea-content {
+  flex: 1;
+  color: #fff;
+  padding: 25px 30px;
+}
+
+.idea-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.idea-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background-color: #d78885;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Small screens ---------- */
+@media screen and (max-width: 700px) {
+
+  header.site-header h1 {
+    font-size: 2rem;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  aside.sidebar {
+    flex: 1 1 auto;
+  }
+
+  section.columns {
+    flex-direction: column;
+  }
+
+  .column img {
+    height: 260px;
+  }
+
+  .idea-row {
+    flex-direction: column;
+  }
+
+  .idea-img {
+    flex: 1 1 auto;
+    height: 220px;
+  }
+}
