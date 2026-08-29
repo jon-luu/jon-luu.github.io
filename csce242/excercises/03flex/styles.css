@@ -9,6 +9,10 @@ body {
     margin:auto;    /* center in the page */
 }
 
+#main-header {
+    background-color:bisque;
+}
+
 #sidebar, #info{
     padding:5x;
 }
