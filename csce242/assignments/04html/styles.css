@@ -321,7 +321,7 @@
   }
 
   .connected-section h2 {
-    font-size: 30px;
+    font-size: 60px;
     margin-bottom: 10px;
   }
 
@@ -338,6 +338,8 @@
   }
 
   .connected-links a {
+    background-color: var(--garnet);
+    color: var(--white);
     border: 2px solid var(--white);
     padding: 12px 28px;
     font-weight: 600;
