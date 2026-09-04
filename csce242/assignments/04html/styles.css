@@ -134,27 +134,12 @@ ul {
 /* Hero */
 .hero {
   position: relative;
-  background-color: var(--black);
-  color: var(--white);
 }
 
 .hero img {
   width: 100%;
   height: 600px;
   object-fit: cover;
-  opacity: 0.55;
-}
-
-.hero-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
 .hero-text .inner {
@@ -212,9 +197,9 @@ ul {
   max-width: 600px;
   padding: 40px;
   position: relative;
-  right:30px;
-  top:350px;
-  margin-left: -700px;  
+  right: 30px;
+  top: 350px;
+  margin-left: -700px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   background-color: var(--garnet);
 }
@@ -258,20 +243,18 @@ ul {
 }
 
 .research-content {
-  flex: 1 1 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
 }
 
 .research-content-inner {
-   max-width: 600px;
+  max-width: 600px;
   padding: 40px;
   position: relative;
-  right:30px;
-  top:100px;
-   
+  margin-right: -700px;
+  top: 200px;
+  z-index: 5;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   background-color: var(--garnet);
 }
@@ -290,9 +273,20 @@ ul {
 
 /* Careers and Institutes */
 .centers-section {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   min-height: 480px;
+}
+
+.centers-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centers-section.reverse {
+  flex-direction: row-reverse;
 }
 
 .centers-img {
@@ -300,50 +294,40 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .centers-img img {
   width: 100%;
-  height: 600px;
+  height: 650px;
   object-fit: cover;
   object-position: center;
 }
 
-.centers-content {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
+.centers-content-inner {
+  max-width: 500px;
+  padding: 40px;
+  position: relative;
+  right: 30px;
+  top: 250px;
+  margin-right: -700px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   background-color: var(--garnet);
 }
 
-.centers-content-inner {
-  max-width: 500px;
-  background-color: var(--white);
-  color: var(--text-gray);
-  padding: 40px;
-  margin-left: -120px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
 .centers-content-inner h2 {
-  font-size: 32px;
-  color: var(--garnet);
+  font-size: 23px;
+  color: var(--white);
   margin-bottom: 20px;
 }
 
 .centers-content-inner p {
   margin-bottom: 25px;
   font-size: 16px;
-  color: var(--text-gray);
+  color: var(--white);
 }
 
 /* Shared button style used across sections */
-.btn-garnet {
+.button {
   display: inline-block;
   background-color: var(--black);
   color: var(--white);
@@ -353,7 +337,7 @@ ul {
   letter-spacing: 0.5px;
 }
 
-.btn-garnet:hover {
+.button:hover {
   background-color: #5a0008;
 }
 
@@ -391,7 +375,7 @@ ul {
 .quote-img {
   flex: 1 1 40%;
   min-height: 300px;
-  padding-left:400px;
+  padding-left: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,52 +392,38 @@ ul {
 .card-row {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
 }
 
 .card {
-  flex: 1 1 33.333%;
-  position: relative;
-  min-height: 300px;
-  overflow: hidden;
-  color: var(--white);
+  flex: 1 1 300px;
 }
 
 .card img {
   width: 100%;
-  height: 100%;
+  height: 320px;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  margin-bottom: 20px;
 }
 
-.card-overlay {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1));
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 25px;
+.card-title {
+  display: block;
+  color: var(--garnet);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.card-overlay .eyebrow {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  color: #e0c0c0;
+.card-title:hover {
+  text-decoration: underline;
 }
 
-.card-overlay h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.card-overlay p {
-  font-size: 14px;
+.card p {
+  color: var(--text-gray);
+  font-size: 16px;
 }
 
 /* Stay Connected */
