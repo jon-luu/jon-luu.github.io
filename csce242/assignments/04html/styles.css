@@ -116,6 +116,7 @@ ul {
 .main-nav ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .main-nav li a {
@@ -611,47 +612,154 @@ ul {
 
 /* Responsive */
 @media (max-width: 900px) {
+  /* Stack all three feature sections into a single column */
   .education-section,
   .research-section,
   .research-section.reverse,
-  .centers-section {
+  .centers-section,
+  .centers-section.reverse {
     flex-direction: column;
   }
+
   .education-img, .education-content,
   .research-img, .research-content,
   .centers-img, .centers-content {
     flex: 1 1 100%;
   }
+
+  /* Shrink the tall desktop images down for mobile */
+  .education-img img,
+  .research-img img,
+  .centers-img img {
+    height: 300px;
+  }
+
+  /* Kill every desktop-only offset used to overlap the cards onto
+     the images, and let each card sit in normal flow underneath
+     its image instead */
   .education-content-inner,
   .research-content-inner,
   .centers-content-inner {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
     margin-left: 0;
     margin-right: 0;
+    max-width: none;
+    width: 100%;
   }
+
+  /* Quote section: stack image above text, remove the huge
+     desktop paddings that were making room for the overlap */
   .quote-section {
     flex-direction: column;
   }
+
+  .quote-text {
+    padding: 40px 25px;
+  }
+
+  .quote-text blockquote {
+    padding-right: 0;
+  }
+
+  .quote-img {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
+  /* Card row and both footers stack into single columns */
   .card-row {
     flex-direction: column;
   }
+
   .unit-footer .inner {
     flex-direction: column;
+  }
+
+  .global-footer-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .global-footer-top {
+    justify-content: center;
+    text-align: center;
   }
 }
 
 /* Small screens: keep nav always visible, just let items wrap */
 @media (max-width: 700px) {
+  .utility-bar ul {
+    justify-content: center;
+  }
+
+  .utility-bar .inner {
+    justify-content: center;
+  }
+
+  .brand-row .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-title {
+    text-align: center;
+  }
+
+  .site-title h1 a {
+    font-size: 20px;
+  }
+
   .main-nav ul {
     flex-wrap: wrap;
+    justify-content: center;
   }
+
   .main-nav li a {
     padding: 12px 12px;
     font-size: 14px;
   }
-  .site-title h1 a {
-    font-size: 20px;
+
+  .hero img {
+    height: 320px;
   }
-  .utility-bar .inner {
-    justify-content: center;
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .callout-section .inner {
+    font-size: 18px;
+  }
+
+  .education-content-inner h2,
+  .research-content-inner h2,
+  .centers-content-inner h2 {
+    font-size: 24px;
+  }
+
+  .connected-section h2 {
+    font-size: 36px;
+  }
+
+  .connected-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connected-links a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .card img {
+    height: 220px;
   }
 }
