@@ -18,7 +18,10 @@ body {
 }
 
 /* Hero */
-
+#hero {
+    position:absolute; 
+    top: 100%;
+}
 
 #hero-description {
     position:absolute;
