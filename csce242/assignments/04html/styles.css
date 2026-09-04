@@ -157,34 +157,42 @@ ul {
   padding: 20px;
 }
 
-.hero-text p {
+.hero-text .inner {
   max-width: 800px;
   text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
   font-size: 22px;
   font-weight: 300;
 }
 
-/* Tools & Resources (screen reader nav) */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+/* Callout Section */
+.callout-section {
+  background-color: var(--light-gray);
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/* Feature sections (Education / Research / Centers) */
-.feature-section {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 480px;
+.callout-section .inner {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--text-gray);
 }
 
-.feature-section.reverse {
-  flex-direction: row-reverse;
+/* Education */
+
+.education-section {
+  position: relative;
 }
 
-.feature-img {
+.education-img {
   flex: 1 1 50%;
   display: flex;
   align-items: center;
@@ -192,14 +200,63 @@ ul {
   overflow: hidden;
 }
 
-.feature-img img {
+.education-img img {
   width: 100%;
   height: 600px;
   object-fit: cover;
   object-position: center;
 }
 
-.feature-content {
+.education-content-inner {
+  max-width: 700px;
+  padding: 40px;
+  margin-left: -120px;
+    position:absolute;
+    top:130%;
+    right:5%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  background-color: var(--garnet);
+}
+
+.education-content-inner h2 {
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.education-content-inner p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--white);
+}
+
+/* ===================== RESEARCH ===================== */
+.research-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 480px;
+}
+
+.research-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.research-img {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.research-img img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.research-content {
   flex: 1 1 50%;
   display: flex;
   align-items: center;
@@ -208,8 +265,61 @@ ul {
   background-color: var(--garnet);
 }
 
-/* Overlapping white card on feature sections */
-.feature-content-inner {
+.research-content-inner {
+  max-width: 500px;
+  background-color: var(--white);
+  color: var(--text-gray);
+  padding: 40px;
+  margin-right: -120px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.research-content-inner h2 {
+  font-size: 32px;
+  color: var(--garnet);
+  margin-bottom: 20px;
+}
+
+.research-content-inner p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--text-gray);
+}
+
+/* ===================== CENTERS AND INSTITUTES ===================== */
+.centers-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 480px;
+}
+
+.centers-img {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.centers-img img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.centers-content {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: var(--garnet);
+}
+
+.centers-content-inner {
   max-width: 500px;
   background-color: var(--white);
   color: var(--text-gray);
@@ -220,23 +330,19 @@ ul {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-.feature-section.reverse .feature-content-inner {
-  margin-left: 0;
-  margin-right: -120px;
-}
-
-.feature-content-inner h2 {
+.centers-content-inner h2 {
   font-size: 32px;
   color: var(--garnet);
   margin-bottom: 20px;
 }
 
-.feature-content-inner p {
+.centers-content-inner p {
   margin-bottom: 25px;
   font-size: 16px;
   color: var(--text-gray);
 }
 
+/* Shared button style used across sections */
 .btn-garnet {
   display: inline-block;
   background-color: var(--black);
@@ -249,36 +355,6 @@ ul {
 
 .btn-garnet:hover {
   background-color: #5a0008;
-}
-
-/* Callout / We're Looking For */
-.callout-section {
-  background-color: var(--white);
-  color: var(--black);
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.callout-section .inner {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.btn-garnet-outline {
-  display: inline-block;
-  border: 2px solid var(--white);
-  color: var(--white);
-  padding: 12px 26px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.btn-garnet-outline:hover {
-  background-color: var(--white);
-  color: var(--garnet);
 }
 
 /* Quote Section */
@@ -559,15 +635,20 @@ ul {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .feature-section,
-  .feature-section.reverse {
+  .education-section,
+  .research-section,
+  .research-section.reverse,
+  .centers-section {
     flex-direction: column;
   }
-  .feature-img,
-  .feature-content {
+  .education-img, .education-content,
+  .research-img, .research-content,
+  .centers-img, .centers-content {
     flex: 1 1 100%;
   }
-  .feature-content-inner {
+  .education-content-inner,
+  .research-content-inner,
+  .centers-content-inner {
     margin-left: 0;
     margin-right: 0;
   }
