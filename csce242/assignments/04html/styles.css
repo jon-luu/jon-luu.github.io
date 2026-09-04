@@ -175,21 +175,23 @@ ul {
 /* Callout Section */
 .callout-section {
   background-color: var(--light-gray);
-  text-align: center;
   padding: 40px 20px;
 }
 
 .callout-section .inner {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 23px;
   color: var(--text-gray);
+  font-weight: bold;
 }
 
 /* Education */
-
 .education-section {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 480px;
 }
 
 .education-img {
@@ -197,7 +199,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .education-img img {
@@ -208,12 +209,12 @@ ul {
 }
 
 .education-content-inner {
-  max-width: 700px;
+  max-width: 600px;
   padding: 40px;
-  margin-left: -120px;
-    position:absolute;
-    top:130%;
-    right:5%;
+  position: relative;
+  right:30px;
+  top:350px;
+  margin-left: -700px;  
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   background-color: var(--garnet);
 }
@@ -230,7 +231,7 @@ ul {
   color: var(--white);
 }
 
-/* ===================== RESEARCH ===================== */
+/* Research */
 .research-section {
   display: flex;
   flex-wrap: wrap;
@@ -288,7 +289,7 @@ ul {
   color: var(--text-gray);
 }
 
-/* ===================== CENTERS AND INSTITUTES ===================== */
+/* Careers and Institutes */
 .centers-section {
   display: flex;
   flex-wrap: wrap;
@@ -361,22 +362,22 @@ ul {
 .quote-section {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   background-color: var(--light-gray);
 }
 
 .quote-text {
   flex: 1 1 60%;
-  padding: 60px 50px;
+  padding: 100px 50px;
   display: flex;
   align-items: center;
 }
 
 .quote-text blockquote {
-  font-size: 22px;
+  font-size: 25px;
   font-style: italic;
-  color: var(--text-gray);
-  border-left: 4px solid var(--garnet);
-  padding-left: 25px;
+  color: var(--garnet);
+  padding-right: 400px;
 }
 
 .quote-text cite {
@@ -385,17 +386,23 @@ ul {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+  color: var(--black);
 }
 
 .quote-img {
   flex: 1 1 40%;
   min-height: 300px;
+  padding-left:400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quote-img img {
-  width: 100%;
-  height: 100%;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 /* Three card row */
