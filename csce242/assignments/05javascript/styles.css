@@ -20,22 +20,6 @@ body {
     margin: 0;
 }
 
-.options-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: navy;
-    color: white;
-    width: 44px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-weight: bold;
-    border-radius: 3px;
-}
-
 /* Page Title */
 #page-title {
     color: steelblue;
