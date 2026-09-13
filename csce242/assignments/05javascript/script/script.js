@@ -13,7 +13,7 @@ document.getElementById("beverage-select").onchange = (e) => {
 // Sticker
 document.getElementById("sticker-wrapper").onclick = (e) => {
     const wrapper = document.getElementById("sticker-wrapper");
-    const existingEmoji = document.getElementById("soccer-sticker");
+    const existingEmoji = document.getElementById("sun-sticker");
 
     if (existingEmoji) {
         existingEmoji.remove();
@@ -21,9 +21,9 @@ document.getElementById("sticker-wrapper").onclick = (e) => {
     }
 
     const emoji = document.createElement("span");
-    emoji.id = "soccer-sticker";
+    emoji.id = "sun-sticker";
     emoji.classList.add("sticker-emoji");
-    emoji.innerHTML = "\u26bd";
+    emoji.innerHTML = "\u2600\ufe0f";
     emoji.style.top = "15%";
     emoji.style.left = "10%";
 
