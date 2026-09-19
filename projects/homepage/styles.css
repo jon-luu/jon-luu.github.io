@@ -142,9 +142,8 @@ button:focus-visible {
 }
 
 .search-icon {
-  font-size: 14px;
-  line-height: 1;
-  opacity: 0.6;
+  width: 14px;
+  height: 14px;
 }
 
 .search-placeholder {
@@ -162,8 +161,8 @@ button:focus-visible {
 }
 
 .cart-icon {
-  font-size: 18px;
-  line-height: 1;
+  width: 18px;
+  height: 18px;
 }
 
 .cart-count {
@@ -414,11 +413,10 @@ button:focus-visible {
   gap: 8px;
 }
 
-/* small orange sparkle on either side of the "HOW IT WORKS" label -
-   just a text character styled with color, no icon file needed */
+/* small orange sparkle icon on either side of the "HOW IT WORKS" label */
 .flourish {
-  font-size: 14px;
-  color: var(--color-accent-orange);
+  width: 14px;
+  height: 14px;
 }
 
 .eyebrow {
@@ -481,15 +479,17 @@ button:focus-visible {
   box-shadow: 0px 4px 12px var(--color-shadow);
 }
 
-/* the icon itself is just an emoji character, no svg/path needed */
 .step-icon {
   display: flex;
   width: 32px;
   height: 32px;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  line-height: 1;
+}
+
+.step-icon img {
+  width: 26px;
+  height: 26px;
 }
 
 .step-number {
@@ -546,8 +546,8 @@ button:focus-visible {
 }
 
 .cta-icon {
-  font-size: 18px;
-  line-height: 1;
+  width: 18px;
+  height: 18px;
 }
 
 .cta-text {
