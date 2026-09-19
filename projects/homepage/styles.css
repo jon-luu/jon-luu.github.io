@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
+/* Colors */
 :root {
   --color-bg-page: #f7f3ea;
   --color-bg-navbar: #fff8f0;
@@ -18,26 +16,48 @@
   --color-cta-text: #f5f0e8;
   --color-shadow: #00000014;
   --color-focus: #4a90e2;
+  --color-hero-overlay: rgba(28, 58, 10, 0.28);
 }
 
+/* Structure */
 * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
 html,
 body {
-  margin: 0px;
   min-height: 100%;
+  font-family: "Geist", Helvetica, Arial, sans-serif;
 }
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid var(--color-focus) !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
 }
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 button,
 input,
 textarea,
@@ -45,335 +65,293 @@ select {
   font-family: inherit;
 }
 
-.cola-clothes-home {
-  display: flex;
-  flex-direction: column;
-  min-height: 1024px;
-  align-items: flex-start;
-  position: relative;
-  background-color: var(--color-bg-page);
+/* a blue outline as a generic focus style */
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
 }
 
-.cola-clothes-home .navbar {
+/* Header */
+.site-header {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
   height: 80px;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 80px;
-  position: relative;
-  align-self: stretch;
+  padding: 0 80px;
   width: 100%;
   background-color: var(--color-bg-navbar);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-color: var(--color-border-navbar);
+  border-bottom: 1px solid var(--color-border-navbar);
 }
 
-.cola-clothes-home .frame {
+.logo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .div-wrapper {
+.logo-mark {
   display: flex;
   width: 32px;
   height: 32px;
   align-items: center;
   justify-content: center;
-  position: relative;
   background-color: var(--color-primary-green);
   border-radius: 4px;
-}
-
-.cola-clothes-home .text-wrapper {
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
   font-size: 18px;
-  position: relative;
-  width: fit-content;
-  font-family: "Geist", Helvetica;
-  font-weight: 800;
   color: var(--color-white);
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .div {
-  position: relative;
-  width: fit-content;
+.logo-text {
   font-family: "Geist", Helvetica;
   font-weight: 800;
-  color: var(--color-primary-green);
   font-size: 20px;
-  letter-spacing: -0.1px;
-  line-height: normal;
+  color: var(--color-primary-green);
 }
 
-.cola-clothes-home .navbar-2 {
+.nav-links {
   display: inline-flex;
   align-items: center;
   gap: 32px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-2 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.nav-link {
   font-family: "Geist", Helvetica;
   font-weight: 500;
-  color: var(--color-primary-green);
   font-size: 15px;
-  letter-spacing: 0;
-  line-height: normal;
+  color: var(--color-primary-green);
 }
 
-.cola-clothes-home .frame-2 {
+.nav-actions {
   display: inline-flex;
   align-items: center;
   gap: 20px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-3 {
+.search-box {
   display: flex;
   width: 200px;
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  position: relative;
   background-color: var(--color-white);
   border-radius: 6px;
-  border: 1px solid;
-  border-color: var(--color-border-navbar);
+  border: 1px solid var(--color-border-navbar);
 }
 
-.cola-clothes-home .vector-wrapper {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.search-icon {
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.6;
 }
 
-.cola-clothes-home .vector {
-  position: absolute;
-  width: 93.75%;
-  height: 93.75%;
-  top: 6.25%;
-  left: 6.25%;
-}
-
-.cola-clothes-home .text-wrapper-3 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.search-placeholder {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
-  color: var(--color-text-placeholder);
   font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
+  color: var(--color-text-placeholder);
 }
 
-.cola-clothes-home .cart-trigger {
+.cart-button {
+  all: unset;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
+  cursor: pointer;
 }
 
-.cola-clothes-home .shopping-bag {
-  position: relative;
-  width: 20px;
-  height: 24px;
+.cart-icon {
+  font-size: 18px;
+  line-height: 1;
 }
 
-.cola-clothes-home .img {
-  position: absolute;
-  width: 92.50%;
-  height: 95.84%;
-  top: 4.16%;
-  left: 7.50%;
-}
-
-.cola-clothes-home .frame-4 {
+.cart-count {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 2px 6px;
-  position: relative;
-  flex: 0 0 auto;
   background-color: var(--color-primary-green);
   border-radius: 10px;
-}
-
-.cola-clothes-home .text-wrapper-4 {
-  margin-top: -1px;
   font-family: "Geist", Helvetica;
   font-weight: 700;
   font-size: 10px;
-  position: relative;
-  width: fit-content;
   color: var(--color-white);
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .hero-section {
+/* Hero */
+.hero {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 48px 80px;
-  flex: 0 0 auto;
   background-color: var(--color-bg-page);
-  position: relative;
-  align-self: stretch;
   width: 100%;
 }
 
-.cola-clothes-home .hero-banner {
+/* wraps the photo so the tint + text can sit on top of it */
+.hero-banner-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-banner {
   height: 460px;
   object-fit: cover;
-  position: relative;
-  align-self: stretch;
   width: 100%;
 }
 
-.cola-clothes-home .featured-section {
+/* soft dark-green tint over the photo so the white headline stays readable */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-hero-overlay);
+  border-radius: inherit;
+}
+
+.hero-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 0px 80px 64px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
+  gap: 16px;
+  max-width: 600px;
+  padding: 40px 48px;
 }
 
-.cola-clothes-home .frame-5 {
+.hero-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  color: var(--color-white);
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.hero-subhead {
+  font-family: "Geist", Helvetica;
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hero-btn-primary {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary-green);
+}
+
+.hero-btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary-green);
+  border: 1px solid var(--color-white);
+}
+
+/* Featured Products */
+.section--featured {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 80px 64px;
+  width: 100%;
+}
+
+.section-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .section-header {
+.section-head {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 8px;
-  position: relative;
   flex: 1;
-  flex-grow: 1;
 }
 
-.cola-clothes-home .text-wrapper-5 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1px;
+.section-title {
   font-family: "Geist", Helvetica;
   font-weight: 700;
   color: var(--color-primary-green);
   font-size: 28px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .p {
-  position: relative;
-  align-self: stretch;
+.section-subtitle {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-6 {
-  position: relative;
-  width: fit-content;
+.view-all-link {
   font-family: "Geist", Helvetica;
   font-weight: 600;
   color: var(--color-primary-green);
   font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.cola-clothes-home .frame-6 {
+.product-grid {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 24px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-7 {
+.product-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative;
   flex: 1;
-  flex-grow: 1;
+  min-width: 220px;
   background-color: var(--color-white);
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid;
-  border-color: var(--color-border-card);
+  border: 1px solid var(--color-border-card);
 }
 
-.cola-clothes-home .image-placeholder {
-  position: relative;
-  align-self: stretch;
+.product-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.cola-clothes-home .frame-8 {
+.product-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 12px;
   padding: 16px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-9 {
+.product-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 4px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-7 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1px;
+.product-name {
   font-family: "Geist", Helvetica;
   font-weight: 700;
   color: var(--color-primary-green);
   font-size: 15px;
-  letter-spacing: 0;
-  line-height: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -381,187 +359,140 @@ select {
   -webkit-box-orient: vertical;
 }
 
-.cola-clothes-home .text-wrapper-8 {
-  align-self: stretch;
+.product-brand {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 13px;
-  letter-spacing: 0;
-  position: relative;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-10 {
+.product-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-9 {
-  position: relative;
-  width: fit-content;
-  margin-top: -0.5px;
+.product-price {
   font-family: "Geist", Helvetica;
   font-weight: 800;
   color: var(--color-primary-green);
   font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-11 {
-  display: inline-flex;
-  align-items: flex-start;
+.product-badge {
   padding: 4px 8px;
-  position: relative;
-  flex: 0 0 auto;
   background-color: var(--color-badge-bg);
   border-radius: 4px;
-}
-
-.cola-clothes-home .text-wrapper-10 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
   font-family: "Geist", Helvetica;
   font-weight: 600;
   color: var(--color-text-muted);
   font-size: 11px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .how-it-works-section {
+/* How It Works */
+.section--how-it-works {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 48px;
   padding: 80px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
   background-color: var(--color-bg-page);
 }
 
-.cola-clothes-home .frame-12 {
+.section-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-13 {
+.eyebrow-row {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .vector-2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+/* small orange sparkle on either side of the "HOW IT WORKS" label -
+   just a text character styled with color, no icon file needed */
+.flourish {
+  font-size: 14px;
+  color: var(--color-accent-orange);
 }
 
-.cola-clothes-home .how-it-works {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.eyebrow {
   font-family: "Outfit", Helvetica;
   font-weight: 600;
   color: var(--color-accent-orange);
   font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-11 {
-  position: relative;
-  width: 640px;
+.how-it-works-title {
+  width: 100%;
+  max-width: 640px;
   font-family: "Outfit", Helvetica;
   font-weight: 800;
   color: var(--color-primary-green);
   font-size: 44px;
   text-align: center;
-  letter-spacing: 0;
   line-height: 48.4px;
 }
 
-.cola-clothes-home .text-wrapper-12 {
-  position: relative;
-  width: 520px;
+.how-it-works-subtitle {
+  width: 100%;
+  max-width: 520px;
   font-family: "Outfit", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 17px;
   text-align: center;
-  letter-spacing: 0;
   line-height: 27.2px;
 }
 
-.cola-clothes-home .frame-14 {
+.steps-grid {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 32px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-15 {
+.step {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  position: relative;
   flex: 1;
-  flex-grow: 1;
+  min-width: 160px;
 }
 
-.cola-clothes-home .frame-16 {
+/* the round badge behind each step icon; positioned so the
+   little number circle can sit on its top-right corner */
+.step-icon-wrap {
+  position: relative;
   display: flex;
   width: 72px;
   height: 72px;
   align-items: center;
   justify-content: center;
-  position: relative;
   background-color: var(--color-badge-bg);
   border-radius: 36px;
-  border: 2px solid;
-  border-color: var(--color-icon-border);
+  border: 2px solid var(--color-icon-border);
   box-shadow: 0px 4px 12px var(--color-shadow);
 }
 
-.cola-clothes-home .img-wrapper {
-  position: relative;
+/* the icon itself is just an emoji character, no svg/path needed */
+.step-icon {
+  display: flex;
   width: 32px;
   height: 32px;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
 }
 
-.cola-clothes-home .vector-3 {
-  position: absolute;
-  width: 86.45%;
-  height: 94.79%;
-  top: 5.21%;
-  left: 13.55%;
-}
-
-.cola-clothes-home .frame-17 {
+.step-number {
   display: flex;
   width: 24px;
   height: 24px;
@@ -572,408 +503,274 @@ select {
   right: -6px;
   background-color: var(--color-accent-orange);
   border-radius: 12px;
-}
-
-.cola-clothes-home .text-wrapper-13 {
   font-family: "Outfit", Helvetica;
   font-weight: 800;
   font-size: 11px;
-  position: relative;
-  width: fit-content;
   color: var(--color-white);
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-18 {
+.step-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-14 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.step-title {
   font-family: "Outfit", Helvetica;
   font-weight: 700;
   color: var(--color-primary-green);
   font-size: 20px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-15 {
-  position: relative;
-  align-self: stretch;
+.step-desc {
   font-family: "Outfit", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 14px;
   text-align: center;
-  letter-spacing: 0;
   line-height: 22.4px;
 }
 
-.cola-clothes-home .vector-4 {
-  position: absolute;
-  width: 94.79%;
-  height: 94.79%;
-  top: 5.21%;
-  left: 5.21%;
-}
-
-.cola-clothes-home .vector-5 {
-  position: absolute;
-  width: 94.79%;
-  height: 78.12%;
-  top: 21.88%;
-  left: 5.21%;
-}
-
-.cola-clothes-home .vector-6 {
-  position: absolute;
-  width: 94.80%;
-  height: 97.42%;
-  top: 2.58%;
-  left: 5.20%;
-}
-
-.cola-clothes-home .frame-19 {
+.cta-banner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 16px;
   padding: 20px 32px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
   background-color: var(--color-cta-green);
   border-radius: 12px;
 }
 
-.cola-clothes-home .tent {
-  position: relative;
-  width: 20px;
-  height: 20px;
+.cta-icon {
+  font-size: 18px;
+  line-height: 1;
 }
 
-.cola-clothes-home .vector-7 {
-  position: absolute;
-  width: 96.67%;
-  height: 92.50%;
-  top: 7.50%;
-  left: 3.33%;
-}
-
-.cola-clothes-home .text-wrapper-16 {
-  position: relative;
-  width: fit-content;
+.cta-text {
   font-family: "Outfit", Helvetica;
   font-weight: 600;
   color: var(--color-cta-text);
   font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-20 {
+.cta-button {
   display: inline-flex;
-  align-items: flex-start;
   padding: 10px 24px;
-  position: relative;
-  flex: 0 0 auto;
   background-color: var(--color-accent-orange);
   border-radius: 8px;
   cursor: pointer;
-}
-
-.cola-clothes-home .text-wrapper-17 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
   font-family: "Outfit", Helvetica;
   font-weight: 700;
   color: var(--color-white);
   font-size: 15px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .brands-section {
+/* Brands */
+.section--brands {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 24px;
   padding: 64px 80px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .section-header-2 {
+.brand-grid {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.cola-clothes-home .frame-21 {
-  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 20px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-22 {
+.brand-chip {
   display: flex;
   height: 80px;
+  min-width: 140px;
+  flex: 1;
   align-items: center;
   justify-content: center;
   padding: 16px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
   background-color: var(--color-white);
   border-radius: 8px;
-  border: 1px solid;
-  border-color: var(--color-border-chip);
-}
-
-.cola-clothes-home .text-wrapper-18 {
-  position: relative;
-  width: fit-content;
+  border: 1px solid var(--color-border-chip);
   font-family: "Geist", Helvetica;
   font-weight: 700;
   color: var(--color-primary-green);
   font-size: 15px;
   letter-spacing: 0.23px;
-  line-height: normal;
 }
 
-.cola-clothes-home .newsletter-section {
+/* Newsletter */
+.section--newsletter {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 80px 80px;
-  position: relative;
-  align-self: stretch;
+  padding: 0 80px 80px;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-23 {
+.newsletter-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
   padding: 48px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
   background-color: var(--color-bg-page);
   border-radius: 8px;
-  border: 1px solid;
-  border-color: var(--color-border-card);
+  border: 1px solid var(--color-border-card);
 }
 
-.cola-clothes-home .text-wrapper-19 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.newsletter-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.newsletter-title {
   font-family: "Geist", Helvetica;
   font-weight: 800;
   color: var(--color-primary-green);
   font-size: 24px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-20 {
-  position: relative;
-  width: 500px;
+.newsletter-desc {
+  width: 100%;
+  max-width: 500px;
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 15px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-24 {
+.newsletter-form {
   display: flex;
-  width: 480px;
   align-items: flex-start;
+  width: 100%;
+  max-width: 480px;
+  flex-wrap: wrap;
   gap: 12px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-25 {
+.newsletter-input-wrap {
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  position: relative;
   flex: 1;
-  flex-grow: 1;
   background-color: var(--color-white);
   border-radius: 4px;
-  border: 1px solid;
-  border-color: var(--color-text-placeholder);
+  border: 1px solid var(--color-text-placeholder);
 }
 
-.cola-clothes-home .text-wrapper-21 {
-  position: relative;
+.newsletter-input {
   width: 100%;
   border: none;
   outline: none;
   background: transparent;
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-primary-green);
   font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-21::placeholder {
+.newsletter-input::placeholder {
   color: var(--color-text-placeholder);
   opacity: 1;
 }
 
-.cola-clothes-home .btn-primary {
+.newsletter-button {
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  position: relative;
-  flex: 0 0 auto;
   background-color: var(--color-primary-green);
   border-radius: 4px;
   border: 1px solid var(--color-primary-green);
   cursor: pointer;
-}
-
-.cola-clothes-home .text-wrapper-22 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
   font-family: "Geist", Helvetica;
   font-weight: 600;
   color: var(--color-white);
   font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .footer-section {
+/* Footer */
+.site-footer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 48px;
   padding: 64px 80px 40px;
-  position: relative;
-  align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
   background-color: var(--color-badge-bg);
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: var(--color-border-card);
+  border-top: 1px solid var(--color-border-card);
 }
 
-.cola-clothes-home .frame-26 {
+.footer-top {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  position: relative;
-  align-self: stretch;
+  gap: 40px;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-27 {
+.footer-brand {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
   gap: 16px;
-  position: relative;
 }
 
-.cola-clothes-home .frame-28 {
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-mark {
   display: flex;
   width: 28px;
   height: 28px;
   align-items: center;
   justify-content: center;
-  position: relative;
   background-color: var(--color-primary-green);
   border-radius: 4px;
-}
-
-.cola-clothes-home .text-wrapper-23 {
-  font-size: 15px;
-  position: relative;
-  width: fit-content;
   font-family: "Geist", Helvetica;
   font-weight: 800;
+  font-size: 15px;
   color: var(--color-white);
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-24 {
-  position: relative;
-  width: fit-content;
+.footer-logo-text {
   font-family: "Geist", Helvetica;
   font-weight: 800;
   color: var(--color-primary-green);
   font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-25 {
-  position: relative;
-  align-self: stretch;
+.footer-desc {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 13px;
-  letter-spacing: 0;
   line-height: 19.5px;
 }
 
-.cola-clothes-home .frame-29 {
+/* each social link is a plain colored circle with the platform's
+   initials in it - no icon file, no svg */
+.social-links {
   display: flex;
   align-items: center;
   gap: 12px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .frame-29 a {
+.social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -982,239 +779,120 @@ select {
   border-radius: 50%;
   background-color: var(--color-primary-green);
   color: var(--color-white);
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  font-size: 11px;
   transition: background-color 0.15s ease;
 }
 
-.cola-clothes-home .frame-29 a:hover {
+.social-links a:hover {
   background-color: var(--color-cta-green);
 }
 
-.cola-clothes-home .frame-29 svg {
-  width: 16px;
-  height: 16px;
-}
-
-.cola-clothes-home .frame-30 {
-  display: inline-flex;
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 48px;
-  position: relative;
-  flex: 0 0 auto;
+  gap: 32px 48px;
 }
 
-.cola-clothes-home .frame-31 {
+.footer-col {
   display: flex;
   flex-direction: column;
-  width: 140px;
-  align-items: flex-start;
+  width: 100%;
+  max-width: 140px;
   gap: 16px;
-  position: relative;
 }
 
-.cola-clothes-home .text-wrapper-26 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.footer-col-title {
   font-family: "Geist", Helvetica;
   font-weight: 700;
   color: var(--color-primary-green);
   font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-32 {
+.footer-col-links {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-27 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.footer-link {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-muted);
   font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .text-wrapper-28 {
-  position: relative;
-  width: fit-content;
-  font-family: "Geist", Helvetica;
-  font-weight: 400;
-  color: var(--color-text-muted);
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.cola-clothes-home .frame-33 {
+.footer-bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0px 0px;
-  position: relative;
-  align-self: stretch;
+  gap: 16px;
+  padding-top: 24px;
   width: 100%;
-  flex: 0 0 auto;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: var(--color-border-card);
+  border-top: 1px solid var(--color-border-card);
 }
 
-.cola-clothes-home .element-cola-clothes-co {
-  position: relative;
-  width: fit-content;
-  margin: 0;
+.footer-copyright {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-placeholder);
   font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.cola-clothes-home .frame-34 {
+.footer-legal-links {
   display: inline-flex;
-  align-items: flex-start;
   gap: 24px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.cola-clothes-home .text-wrapper-29 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
+.footer-legal-link {
   font-family: "Geist", Helvetica;
-  font-weight: 400;
   color: var(--color-text-placeholder);
   font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-/* ==========================================================================
-   Responsive adjustments
-   Base fixed-width text/containers from the Figma export are relaxed to
-   max-width so they never overflow narrower viewports, then padding,
-   font sizes and row layouts are scaled down at three breakpoints.
-   ========================================================================== */
-
-.cola-clothes-home .text-wrapper-11 {
-  width: 100%;
-  max-width: 640px;
-}
-
-.cola-clothes-home .text-wrapper-12 {
-  width: 100%;
-  max-width: 520px;
-}
-
-.cola-clothes-home .text-wrapper-20 {
-  width: 100%;
-  max-width: 500px;
-}
-
-.cola-clothes-home .frame-24 {
-  width: 100%;
-  max-width: 480px;
-  flex-wrap: wrap;
-}
-
-.cola-clothes-home .frame-27 {
-  width: 100%;
-  max-width: 300px;
-}
-
-.cola-clothes-home .frame-31 {
-  width: 100%;
-  max-width: 140px;
-}
-
-.cola-clothes-home .navbar {
-  flex-wrap: wrap;
-  row-gap: 12px;
-}
-
-.cola-clothes-home .frame-6 {
-  flex-wrap: wrap;
-}
-
-.cola-clothes-home .frame-7 {
-  min-width: 220px;
-}
-
-.cola-clothes-home .frame-14 {
-  flex-wrap: wrap;
-}
-
-.cola-clothes-home .frame-15 {
-  min-width: 160px;
-}
-
-.cola-clothes-home .frame-21 {
-  flex-wrap: wrap;
-}
-
-.cola-clothes-home .frame-22 {
-  min-width: 140px;
-}
-
-.cola-clothes-home .frame-26 {
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.cola-clothes-home .frame-30 {
-  flex-wrap: wrap;
-  gap: 32px 48px;
-}
-
-.cola-clothes-home .frame-19 {
-  flex-wrap: wrap;
-}
-
+/* Responsive Design */
 /* Tablet */
 @media (max-width: 1024px) {
-  .cola-clothes-home .navbar,
-  .cola-clothes-home .hero-section,
-  .cola-clothes-home .featured-section,
-  .cola-clothes-home .how-it-works-section,
-  .cola-clothes-home .brands-section,
-  .cola-clothes-home .newsletter-section,
-  .cola-clothes-home .footer-section {
+  .site-header,
+  .hero,
+  .section--featured,
+  .section--how-it-works,
+  .section--brands,
+  .section--newsletter,
+  .site-footer {
     padding-left: 48px;
     padding-right: 48px;
   }
 
-  .cola-clothes-home .hero-banner {
-    height: 360px;
+  .hero-banner-wrap {
+    min-height: 380px;
   }
 
-  .cola-clothes-home .text-wrapper-11 {
+  .hero-banner {
+    height: 380px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .how-it-works-title {
     font-size: 36px;
     line-height: 40px;
   }
 
-  .cola-clothes-home .frame-7 {
+  .product-card {
     min-width: calc(50% - 12px);
     flex: 1 1 calc(50% - 12px);
   }
 
-  .cola-clothes-home .frame-15 {
+  .step {
     min-width: calc(50% - 16px);
     flex: 1 1 calc(50% - 16px);
   }
 
-  .cola-clothes-home .frame-22 {
+  .brand-chip {
     min-width: calc(33.333% - 14px);
     flex: 1 1 calc(33.333% - 14px);
   }
@@ -1222,13 +900,13 @@ select {
 
 /* Tablet portrait / large mobile */
 @media (max-width: 768px) {
-  .cola-clothes-home .navbar {
+  .site-header {
     height: auto;
     padding-top: 16px;
     padding-bottom: 16px;
   }
 
-  .cola-clothes-home .navbar-2 {
+  .nav-links {
     order: 3;
     width: 100%;
     justify-content: center;
@@ -1236,52 +914,69 @@ select {
     gap: 16px 24px;
   }
 
-  .cola-clothes-home .hero-section,
-  .cola-clothes-home .featured-section,
-  .cola-clothes-home .how-it-works-section,
-  .cola-clothes-home .brands-section,
-  .cola-clothes-home .newsletter-section,
-  .cola-clothes-home .footer-section {
+  .hero,
+  .section--featured,
+  .section--how-it-works,
+  .section--brands,
+  .section--newsletter,
+  .site-footer {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  .cola-clothes-home .hero-section {
+  .hero {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
-  .cola-clothes-home .hero-banner {
-    height: 260px;
+  .hero-banner-wrap {
+    min-height: 340px;
   }
 
-  .cola-clothes-home .frame-5 {
+  .hero-banner {
+    height: 340px;
+  }
+
+  .hero-content {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subhead {
+    font-size: 14px;
+  }
+
+  .section-heading {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
 
-  .cola-clothes-home .text-wrapper-11 {
+  .how-it-works-title {
     font-size: 30px;
     line-height: 36px;
   }
 
-  .cola-clothes-home .text-wrapper-12 {
+  .how-it-works-subtitle {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .cola-clothes-home .how-it-works-section {
+  .section--how-it-works {
     padding-top: 56px;
     padding-bottom: 56px;
     gap: 32px;
   }
 
-  .cola-clothes-home .frame-23 {
+  .newsletter-card {
     padding: 32px 24px;
   }
 
-  .cola-clothes-home .frame-33 {
+  .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
@@ -1290,63 +985,88 @@ select {
 
 /* Mobile */
 @media (max-width: 480px) {
-  .cola-clothes-home .navbar,
-  .cola-clothes-home .hero-section,
-  .cola-clothes-home .featured-section,
-  .cola-clothes-home .how-it-works-section,
-  .cola-clothes-home .brands-section,
-  .cola-clothes-home .newsletter-section,
-  .cola-clothes-home .footer-section {
+  .site-header,
+  .hero,
+  .section--featured,
+  .section--how-it-works,
+  .section--brands,
+  .section--newsletter,
+  .site-footer {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .cola-clothes-home .hero-banner {
-    height: 200px;
+  .hero-banner-wrap {
+    min-height: 360px;
   }
 
-  .cola-clothes-home .frame-3 {
+  .hero-banner {
+    height: 360px;
+  }
+
+  .hero-content {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px 16px;
+  }
+
+  .search-box {
     width: 140px;
   }
 
-  .cola-clothes-home .text-wrapper-11 {
+  .how-it-works-title {
     font-size: 26px;
     line-height: 32px;
   }
 
-  .cola-clothes-home .frame-7,
-  .cola-clothes-home .frame-15,
-  .cola-clothes-home .frame-22 {
+  .product-card,
+  .step,
+  .brand-chip {
     flex: 1 1 100%;
     min-width: 100%;
   }
 
-  .cola-clothes-home .frame-19 {
+  .cta-banner {
     flex-direction: column;
     text-align: center;
     padding: 24px 20px;
   }
 
-  .cola-clothes-home .frame-24 {
+  .newsletter-form {
     flex-direction: column;
   }
 
-  .cola-clothes-home .btn-primary {
+  .newsletter-button {
     width: 100%;
     justify-content: center;
   }
 
-  .cola-clothes-home .frame-26 {
+  .footer-top {
     flex-direction: column;
     gap: 32px;
   }
 
-  .cola-clothes-home .frame-30 {
+  .footer-columns {
     width: 100%;
     justify-content: space-between;
   }
 
-  .cola-clothes-home .frame-31 {
+  .footer-col {
     max-width: none;
   }
 }
