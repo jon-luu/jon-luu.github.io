@@ -56,7 +56,7 @@ document.getElementById("daysInput").oninput = (e) => {
     } else if (days <= 5) {
         message = "You are starting to lose a real chunk of your grade.";
     } else if (days <= 9) {
-        message = "This is not an online class, you are missing valuable learning oportunities.";
+        message = "This is too many missed classes. You need to get back on track.";
     } else {
         message = "That is a lot of missed class. Talk to your professor.";
     }
