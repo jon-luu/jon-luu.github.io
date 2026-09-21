@@ -1,0 +1,120 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: darkslategray;
+  background: white;
+  text-align: center;
+}
+
+.page {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.subtitle {
+  color: royalblue;
+  margin-bottom: 10px;
+}
+
+/* nav */
+.toggle-btn {
+  display: none; /* hidden on large screens, shown in the media query below */
+  background: none;
+  border: none;
+  color: darkslategray;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* pipe separator between items, skipped after the last one */
+.menu-list li:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+  color: gray;
+}
+
+.menu-link {
+  color: royalblue;
+  text-decoration: none;
+  cursor: pointer; /* hand cursor on hover, per spec */
+}
+
+.menu-link:hover,
+.menu-link.active {
+  color: midnightblue;
+  text-decoration: underline;
+}
+
+/* exercise sections */
+.panel {
+  background: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 16px;
+}
+
+.panel h3 {
+  color: midnightblue;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  margin-top: 10px;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background: white;
+}
+
+input:focus {
+  outline: 2px solid royalblue;
+  outline-offset: 1px;
+}
+
+footer {
+  margin-top: 20px;
+  color: gray;
+  font-size: 0.9em;
+}
+
+/* small screens: vertical toggle menu */
+@media (max-width: 480px) {
+  .toggle-btn {
+    display: inline-block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    display: none; /* stays hidden until "open" class is added by JS */
+  }
+
+  .menu-list.open {
+    display: flex;
+  }
+
+  /* no pipes needed when the list is stacked vertically */
+  .menu-list li:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
+}
