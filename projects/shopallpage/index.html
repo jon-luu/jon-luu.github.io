@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cola Clothes - Shop All</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="nav.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="../homepage/index.html">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Cola Clothes</span>
+      </a>
+
+      <!-- hamburger button, only shows on small screens -->
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link nav-link--active" href="index.html">Shop All</a>
+        <a class="nav-link" href="#">Apparel</a>
+        <a class="nav-link" href="#">Gear &amp; Equipment</a>
+        <a class="nav-link" href="#">Sell</a>
+        <a class="nav-link" href="#">About Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <img class="search-icon" src="../homepage/images/icons/icon-search.png" alt="" aria-hidden="true" />
+          <span class="search-placeholder">Search gear...</span>
+        </div>
+
+        <button class="cart-button" type="button" aria-label="Cart, 2 items">
+          <img class="cart-icon" src="../homepage/images/icons/icon-cart.png" alt="" aria-hidden="true" />
+          <span class="cart-count">2</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Page Banner -->
+      <section class="page-banner">
+        <div class="page-banner-card">
+          <h1 class="page-title">Shop All Listings</h1>
+          <p class="page-subtitle">Explore curated secondhand outdoor gear and apparel from verified local adventurers in Columbia, SC</p>
+        </div>
+      </section>
+
+      <!-- Shop -->
+      <section class="section section--shop">
+
+        <!-- Filters sidebar -->
+        <aside class="filters">
+          <details class="filters-panel" open>
+            <summary class="filters-toggle">Filters</summary>
+
+            <div class="filter-group">
+              <div class="filter-title">Categories</div>
+              <div class="filter-links">
+                <a class="filter-link filter-link--active" href="#">All Items</a>
+                <a class="filter-link" href="#">Jackets &amp; Layers</a>
+                <a class="filter-link" href="#">Base Layers &amp; Shirts</a>
+                <a class="filter-link" href="#">Pants &amp; Shorts</a>
+                <a class="filter-link" href="#">Tents &amp; Shelters</a>
+                <a class="filter-link" href="#">Footwear</a>
+                <a class="filter-link" href="#">Accessories</a>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-title">Condition</div>
+              <label class="filter-option"><input type="checkbox" name="condition" value="like-new" /> Like New</label>
+              <label class="filter-option"><input type="checkbox" name="condition" value="excellent" /> Excellent</label>
+              <label class="filter-option"><input type="checkbox" name="condition" value="very-good" /> Very Good</label>
+              <label class="filter-option"><input type="checkbox" name="condition" value="good" /> Good</label>
+              <label class="filter-option"><input type="checkbox" name="condition" value="worn-in" /> Worn In</label>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-title">Price Range</div>
+              <label class="filter-option"><input type="checkbox" name="price" value="under-25" /> Under $25</label>
+              <label class="filter-option"><input type="checkbox" name="price" value="25-50" /> $25 - $50</label>
+              <label class="filter-option"><input type="checkbox" name="price" value="50-100" /> $50 - $100</label>
+              <label class="filter-option"><input type="checkbox" name="price" value="over-100" /> Over $100</label>
+            </div>
+          </details>
+        </aside>
+
+        <!-- Listings -->
+        <div class="listings">
+          <div class="listings-bar">
+            <p class="results-count">Showing 1 - 8 of 132 results</p>
+            <div class="sort">
+              <label class="sort-label" for="sort-select">Sort by:</label>
+              <select class="sort-select" id="sort-select">
+                <option>Most Recent</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <!-- first item opens the product preview page -->
+            <a class="product-card" href="../productpage/index.html">
+              <img class="product-image" src="images/patagonia-parka.jpg" alt="Patagonia Tres 3-in-1 Parka" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Patagonia Tres 3-in-1 Parka</div>
+                  <div class="product-brand">Patagonia</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$95.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE M</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <article class="product-card">
+              <img class="product-image" src="images/salomon-boots.jpg" alt="Salomon Quest 4D 3 GTX Boots" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Salomon Quest 4D 3 GTX Boots</div>
+                  <div class="product-brand">Salomon</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$78.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE 9</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/patagonia-r1.jpg" alt="Patagonia R1 Pullover" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Patagonia R1 Pullover</div>
+                  <div class="product-brand">Patagonia</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$42.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE L</div>
+                    <div class="product-badge product-badge--condition">GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/rei-tent.jpg" alt="REI Co-op Half Dome 2 Plus Tent" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">REI Co-op Half Dome 2 Plus Tent</div>
+                  <div class="product-brand">REI Co-op</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$150.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SLEEPS 2</div>
+                    <div class="product-badge product-badge--condition">LIKE NEW</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/smartwool-base.jpg" alt="Smartwool Merino 150 Base Layer" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Smartwool Merino 150 Base Layer</div>
+                  <div class="product-brand">Smartwool</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$28.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE L</div>
+                    <div class="product-badge product-badge--condition">WORN IN</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/prana-pants.jpg" alt="Prana Stretch Zion Convertible Pants" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Prana Stretch Zion Convertible Pants</div>
+                  <div class="product-brand">Prana</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$35.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE 30</div>
+                    <div class="product-badge product-badge--condition">VERY GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/osprey-pack.jpg" alt="Osprey Atmos 65L Backpack" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Osprey Atmos 65L Backpack</div>
+                  <div class="product-brand">Osprey</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$95.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">65L</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/carhartt-jacket.jpg" alt="Carhartt WIP Detroit Jacket" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Carhartt WIP Detroit Jacket</div>
+                  <div class="product-brand">Carhartt WIP</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$65.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE M</div>
+                    <div class="product-badge product-badge--condition">GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="load-more">
+            <a class="load-more-button" href="#">Load More Items</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">C</div>
+            <span class="footer-logo-text">Cola Clothes</span>
+          </div>
+          <p class="footer-desc">Giving outdoor gear another adventure. Buy and sell pre-loved hiking, camping, and climbing gear with ease in Columbia, South Carolina</p>
+
+          <!-- social links -->
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter / X">X</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <div class="footer-col-title">Shop</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="index.html">All Gear</a>
+              <a class="footer-link" href="#">Apparel</a>
+              <a class="footer-link" href="#">Gear &amp; Equipment</a>
+              <a class="footer-link" href="#">Accessories</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Sell</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Start Selling</a>
+              <a class="footer-link" href="#">Seller Guidelines</a>
+              <a class="footer-link" href="#">Payout Methods</a>
+              <a class="footer-link" href="#">Shipping Labels</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Support</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Help Center</a>
+              <a class="footer-link" href="#">Safe Buying</a>
+              <a class="footer-link" href="#">Contact Us</a>
+              <a class="footer-link" href="#">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Cola Clothes Co. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a class="footer-legal-link" href="#">Privacy Policy</a>
+          <a class="footer-legal-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

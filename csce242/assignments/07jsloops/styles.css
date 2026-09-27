@@ -10,6 +10,7 @@ body {
   background: #8fc563;
 }
 
+/* Used Ai to generate the car and road CSS. */
 .road {
   position: relative;
   height: 180px;
