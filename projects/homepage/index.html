@@ -6,19 +6,27 @@
     <title>Cola Clothes - Home</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="nav.js" defer></script>
   </head>
   <body>
     <!-- Header -->
     <header class="site-header">
-      <div class="logo">
+      <a class="logo" href="index.html">
         <div class="logo-mark">C</div>
         <span class="logo-text">Cola Clothes</span>
-      </div>
+      </a>
 
-      <nav class="nav-links">
-        <a class="nav-link" href="#">Shop All</a>
-        <a class="nav-link" href="#">Apparel</a>
-        <a class="nav-link" href="#">Gear &amp; Equipment</a>
+      <!-- hamburger button, only shows on small screens -->
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link" href="../shopallpage/index.html">Shop All</a>
+        <a class="nav-link" href="../apparelpage/index.html">Apparel</a>
+        <a class="nav-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
         <a class="nav-link" href="#">Sell</a>
         <a class="nav-link" href="#">About Us</a>
       </nav>
@@ -50,7 +58,7 @@
             <h1 class="hero-title">Gear for the next trail, not the landfill</h1>
             <p class="hero-subhead">Shop tested trail apparel, camping gear, and outdoor equipment from local adventurers and verified sellers.</p>
             <div class="hero-buttons">
-              <a class="hero-btn-primary" href="#">Shop Now</a>
+              <a class="hero-btn-primary" href="../shopallpage/index.html">Shop Now</a>
               <a class="hero-btn-secondary" href="#">Start Selling</a>
             </div>
           </div>
@@ -64,7 +72,7 @@
             <p class="section-title">Fresh Finds for the Trail</p>
             <p class="section-subtitle">Verified secondhand gear from local hikers, campers, and climbers</p>
           </div>
-          <a class="view-all-link" href="#">View All Listings</a>
+          <a class="view-all-link" href="../shopallpage/index.html">View All Listings</a>
         </div>
 
         <div class="product-grid">
@@ -262,9 +270,9 @@
           <div class="footer-col">
             <div class="footer-col-title">Shop</div>
             <div class="footer-col-links">
-              <a class="footer-link" href="#">All Gear</a>
-              <a class="footer-link" href="#">Apparel</a>
-              <a class="footer-link" href="#">Gear &amp; Equipment</a>
+              <a class="footer-link" href="../shopallpage/index.html">All Gear</a>
+              <a class="footer-link" href="../apparelpage/index.html">Apparel</a>
+              <a class="footer-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
               <a class="footer-link" href="#">Accessories</a>
             </div>
           </div>

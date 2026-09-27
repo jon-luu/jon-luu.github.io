@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cola Clothes - Gear &amp; Equipment</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="nav.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="../homepage/index.html">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Cola Clothes</span>
+      </a>
+
+      <!-- hamburger button, only shows on small screens -->
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link" href="../shopallpage/index.html">Shop All</a>
+        <a class="nav-link" href="../apparelpage/index.html">Apparel</a>
+        <a class="nav-link nav-link--active" href="index.html">Gear &amp; Equipment</a>
+        <a class="nav-link" href="#">Sell</a>
+        <a class="nav-link" href="#">About Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <img class="search-icon" src="../homepage/images/icons/icon-search.png" alt="" aria-hidden="true" />
+          <span class="search-placeholder">Search items...</span>
+        </div>
+
+        <button class="cart-button" type="button" aria-label="Cart, 2 items">
+          <img class="cart-icon" src="../homepage/images/icons/icon-cart.png" alt="" aria-hidden="true" />
+          <span class="cart-count">2</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Page Banner -->
+      <section class="page-banner">
+        <div class="page-banner-card">
+          <h1 class="page-title">Gear &amp; Equipment</h1>
+          <p class="page-subtitle">Backpacks, tents, sleeping bags, and camp equipment for your next trip</p>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section class="section--intro">
+        <div class="intro-text">
+          <p class="intro-eyebrow">Secondhand outdoor gear</p>
+          <h2 class="intro-title">Tested trails, new adventures.</h2>
+          <p class="intro-desc">Shop curated secondhand hiking, camping, and climbing gear from real outdoor enthusiasts. Every item is inspected, photographed, and ready to ship.</p>
+          <div class="intro-buttons">
+            <a class="intro-btn-primary" href="#listings">Explore Gear</a>
+            <a class="intro-btn-secondary" href="#">Sell Your Gear</a>
+          </div>
+        </div>
+        <img class="intro-image" src="images/gear-flatlay.jpg" alt="Backpack, sleeping bag, trekking poles, and camp stove laid out on a wooden table" />
+      </section>
+
+      <!-- Category Pills -->
+      <nav class="section--categories" aria-label="Gear categories">
+        <a class="category-pill category-pill--active" href="#">All Gear</a>
+        <a class="category-pill" href="#">Tents &amp; Shelters</a>
+        <a class="category-pill" href="#">Sleeping Bags &amp; Pads</a>
+        <a class="category-pill" href="#">Cookware &amp; Camp Kitchen</a>
+        <a class="category-pill" href="#">Backpacks &amp; Bags</a>
+        <a class="category-pill" href="#">Climbing &amp; Water Gear</a>
+      </nav>
+
+      <!-- Listings -->
+      <section class="section--listings" id="listings">
+        <div class="listings-bar">
+          <h2 class="listings-title">Active Listings</h2>
+          <p class="results-count">8 Items Found</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- first item opens the product preview page -->
+            <a class="product-card" href="../productpage/index.html">
+              <img class="product-image" src="images/tent.jpg" alt="3-Season Tent (2P)" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">3-Season Tent (2P)</div>
+                  <div class="product-brand">REI Co-op</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$150.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SLEEPS 2</div>
+                    <div class="product-badge product-badge--condition">LIKE NEW</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <article class="product-card">
+              <img class="product-image" src="images/sleeping-bag.jpg" alt="0°F Down Sleeping Bag" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">0&deg;F Down Sleeping Bag</div>
+                  <div class="product-brand">REI Co-op</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$110.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">REGULAR</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/sleeping-pad.jpg" alt="Inflatable Sleeping Pad" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Inflatable Sleeping Pad</div>
+                  <div class="product-brand">Therm-a-Rest</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$58.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">REGULAR</div>
+                    <div class="product-badge product-badge--condition">VERY GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/backpack.jpg" alt="65L Backpacking Pack" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">65L Backpacking Pack</div>
+                  <div class="product-brand">Osprey</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$120.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">ONE SIZE</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/approach-shoes.jpg" alt="Approach Shoes" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Approach Shoes</div>
+                  <div class="product-brand">La Sportiva</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$85.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE 7</div>
+                    <div class="product-badge product-badge--condition">GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/camp-stove.jpg" alt="2-Burner Camp Stove" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">2-Burner Camp Stove</div>
+                  <div class="product-brand">Coleman</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$40.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">STANDARD</div>
+                    <div class="product-badge product-badge--condition">LIKE NEW</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/climbing-harness.jpg" alt="Climbing Harness" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Climbing Harness</div>
+                  <div class="product-brand">Black Diamond</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$45.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">SIZE M</div>
+                    <div class="product-badge product-badge--condition">VERY GOOD</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-image" src="images/trekking-poles.jpg" alt="Trekking Poles (Pair)" />
+              <div class="product-body">
+                <div class="product-info">
+                  <div class="product-name">Trekking Poles (Pair)</div>
+                  <div class="product-brand">Black Diamond</div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-price">$32.00</div>
+                  <div class="product-badges">
+                    <div class="product-badge">ADJUSTABLE</div>
+                    <div class="product-badge product-badge--condition">EXCELLENT</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">C</div>
+            <span class="footer-logo-text">Cola Clothes</span>
+          </div>
+          <p class="footer-desc">Giving outdoor gear another adventure. Buy and sell pre-loved hiking, camping, and climbing gear with ease in Columbia, South Carolina</p>
+
+          <!-- social links -->
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter / X">X</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <div class="footer-col-title">Shop</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="../shopallpage/index.html">All Gear</a>
+              <a class="footer-link" href="../apparelpage/index.html">Apparel</a>
+              <a class="footer-link" href="index.html">Gear &amp; Equipment</a>
+              <a class="footer-link" href="#">Accessories</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Sell</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Start Selling</a>
+              <a class="footer-link" href="#">Seller Guidelines</a>
+              <a class="footer-link" href="#">Payout Methods</a>
+              <a class="footer-link" href="#">Shipping Labels</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Support</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Help Center</a>
+              <a class="footer-link" href="#">Safe Buying</a>
+              <a class="footer-link" href="#">Contact Us</a>
+              <a class="footer-link" href="#">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Cola Clothes Co. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a class="footer-legal-link" href="#">Privacy Policy</a>
+          <a class="footer-legal-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
