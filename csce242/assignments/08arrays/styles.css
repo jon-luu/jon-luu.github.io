@@ -1,3 +1,4 @@
+/* Page background and base text */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #2b3a55;
@@ -7,6 +8,7 @@ body {
     padding: 40px 16px;
 }
 
+/* Centered card that holds everything */
 main {
     max-width: 480px;
     margin: 0 auto;
@@ -16,6 +18,7 @@ main {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Headings */
 h1 {
     margin: 0;
     color: #2b3a55;
@@ -26,6 +29,7 @@ h2 {
     color: #e07a5f;
 }
 
+/* Destination type dropdown */
 select {
     padding: 6px 10px;
     border: 2px solid #81b29a;
@@ -35,6 +39,7 @@ select {
     background-color: white;
 }
 
+/* List of destination links */
 #destination-list {
     list-style: none;
     padding: 0;
@@ -56,6 +61,7 @@ select {
     text-decoration: underline;
 }
 
+/* Embedded Google map */
 #map {
     width: 100%;
     height: 300px;
@@ -63,6 +69,7 @@ select {
     border-radius: 12px;
 }
 
+/* Hides the map until a destination is clicked */
 .hidden {
     display: none;
 }

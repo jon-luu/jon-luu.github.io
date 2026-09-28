@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cola Clothes - Sell</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="nav.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="../homepage/index.html">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Cola Clothes</span>
+      </a>
+
+      <!-- hamburger button, only shows on small screens -->
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link" href="../shopallpage/index.html">Shop All</a>
+        <a class="nav-link" href="../apparelpage/index.html">Apparel</a>
+        <a class="nav-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
+        <a class="nav-link nav-link--active" href="index.html">Sell</a>
+        <a class="nav-link" href="../aboutpage/index.html">About Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <img class="search-icon" src="../homepage/images/icons/icon-search.png" alt="" aria-hidden="true" />
+          <span class="search-placeholder">Search gear...</span>
+        </div>
+
+        <a class="cart-button" href="../checkoutpage/index.html" aria-label="Cart, 2 items">
+          <img class="cart-icon" src="../homepage/images/icons/icon-cart.png" alt="" aria-hidden="true" />
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Sell Hero -->
+      <section class="sell-hero">
+        <div class="sell-hero-card">
+          <h1 class="sell-hero-title">Turn Your Gear Closet into Trail Cash</h1>
+          <p class="sell-hero-desc">Sell your high-quality secondhand outdoor gear to local climbers, hikers, and campers. Instant payouts, zero hassle, and a marketplace built for enthusiasts.</p>
+          <a class="sell-hero-button" href="#listing-form">Upload First Item</a>
+        </div>
+      </section>
+
+      <!-- How Reselling Works -->
+      <section class="section--how-it-works">
+        <div class="section-intro">
+          <h2 class="section-title">How Reselling Works</h2>
+          <p class="section-subtitle">Four simple steps to lighten your gear closet and fund the next adventure.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- step 1 -->
+          <div class="step">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
+              <div class="step-number">01</div>
+            </div>
+            <h3 class="step-title">Take Photos</h3>
+            <p class="step-desc">Snap clear, natural-light shots from the front, back, and detail tags so buyers know exactly what they're getting.</p>
+          </div>
+
+          <!-- step 2 -->
+          <div class="step">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z" /><circle cx="7.5" cy="8.5" r="1.5" /></svg>
+              <div class="step-number">02</div>
+            </div>
+            <h3 class="step-title">Set Your Price</h3>
+            <p class="step-desc">Pick a fair price based on condition, demand, and original retail value. We'll suggest a competitive range to help it sell fast.</p>
+          </div>
+
+          <!-- step 3 -->
+          <div class="step">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z" /><path d="M14 10h4l3 3v3h-7z" /><circle cx="6" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg>
+              <div class="step-number">03</div>
+            </div>
+            <h3 class="step-title">Ship or Meet</h3>
+            <p class="step-desc">Download a prepaid shipping label for nationwide buyers, or arrange a safe local meetup at a trailhead, brewery, or outdoor hub.</p>
+          </div>
+
+          <!-- step 4 -->
+          <div class="step">
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2" /><circle cx="12" cy="12" r="3" /></svg>
+              <div class="step-number">04</div>
+            </div>
+            <h3 class="step-title">Get Paid</h3>
+            <p class="step-desc">Enjoy secure payouts immediately after buyer verification, so you can put the cash toward a new tent, crampons, or next season's shell.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Listing Form -->
+      <section class="section--listing" id="listing-form">
+        <form class="listing-form" action="#">
+          <div class="form-head">
+            <h2 class="form-title">Draft Your Listing</h2>
+            <p class="form-desc">All fields are verified by our team before publishing to keep the marketplace trusted and easy to shop.</p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="item-title">Item Title</label>
+            <input class="form-input" id="item-title" type="text" placeholder="e.g., Patagonia Tres 3-in-1 Parka, Men's L, Gently Used" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="item-category">Category</label>
+              <select class="form-select" id="item-category">
+                <option selected>Jackets &amp; Outerwear</option>
+                <option>Base Layers &amp; Knits</option>
+                <option>Pants &amp; Shorts</option>
+                <option>Footwear</option>
+                <option>Tents &amp; Shelters</option>
+                <option>Sleeping Bags &amp; Pads</option>
+                <option>Backpacks &amp; Bags</option>
+                <option>Accessories</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="item-condition">Condition</label>
+              <select class="form-select" id="item-condition">
+                <option>Like New</option>
+                <option selected>Excellent (Minor Wear)</option>
+                <option>Very Good</option>
+                <option>Good</option>
+                <option>Worn In</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="item-size">Size</label>
+              <select class="form-select" id="item-size">
+                <option>X-Small</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option selected>Large</option>
+                <option>X-Large</option>
+                <option>One Size</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="item-price">Price (USD)</label>
+              <div class="price-input-wrap">
+                <span class="price-symbol">$</span>
+                <input class="form-input" id="item-price" type="number" min="0" step="0.01" placeholder="65.00" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="item-description">Description</label>
+            <textarea class="form-textarea" id="item-description" placeholder="Mention details like fit, fabric composite, flaws, and original retail value..."></textarea>
+          </div>
+
+          <button class="form-submit" type="submit">List Item Instantly</button>
+        </form>
+
+        <!-- Upload + Tips -->
+        <aside class="sell-sidebar">
+          <div class="upload">
+            <div class="upload-head">
+              <h2 class="upload-title">Upload Photos</h2>
+              <p class="upload-desc">High resolution front and tag photos boost sales by 4x.</p>
+            </div>
+
+            <div class="upload-box">
+              <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4" /><path d="M7 9l5-5 5 5" /><path d="M4 16v4h16v-4" /></svg>
+              <p class="upload-text">Drag gear photos here</p>
+              <p class="upload-hint">PNG, JPG up to 10MB</p>
+              <label class="upload-button" for="photo-upload">Browse Files</label>
+              <input class="upload-input" id="photo-upload" type="file" accept="image/png, image/jpeg" multiple />
+            </div>
+          </div>
+
+          <div class="tips-card">
+            <h3 class="tips-title">Outdoor Gear-Selling Tips</h3>
+            <div class="tips-list">
+              <p class="tip"><span class="tip-number">01</span> Clean, dry gear photographed outdoors attracts higher bids.</p>
+              <p class="tip"><span class="tip-number">02</span> Local meetups are best arranged at public hub spots near Main St.</p>
+              <p class="tip"><span class="tip-number">03</span> We inspect everything, so keep original stuff sacks and tags if you have them.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">C</div>
+            <span class="footer-logo-text">Cola Clothes</span>
+          </div>
+          <p class="footer-desc">Giving outdoor gear another adventure. Buy and sell pre-loved hiking, camping, and climbing gear with ease in Columbia, South Carolina</p>
+
+          <!-- social links -->
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter / X">X</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <div class="footer-col-title">Shop</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="../shopallpage/index.html">All Gear</a>
+              <a class="footer-link" href="../apparelpage/index.html">Apparel</a>
+              <a class="footer-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
+              <a class="footer-link" href="#">Accessories</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Sell</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="index.html">Start Selling</a>
+              <a class="footer-link" href="#">Seller Guidelines</a>
+              <a class="footer-link" href="#">Payout Methods</a>
+              <a class="footer-link" href="#">Shipping Labels</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Support</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Help Center</a>
+              <a class="footer-link" href="#">Safe Buying</a>
+              <a class="footer-link" href="#">Contact Us</a>
+              <a class="footer-link" href="#">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Cola Clothes Co. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a class="footer-legal-link" href="#">Privacy Policy</a>
+          <a class="footer-legal-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

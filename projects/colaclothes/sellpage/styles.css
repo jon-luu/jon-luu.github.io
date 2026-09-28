@@ -1,0 +1,907 @@
+/* Colors */
+:root {
+  --color-bg-page: #f7f3ea;
+  --color-bg-navbar: #fff8f0;
+  --color-border-navbar: #e7dccf;
+  --color-primary-green: #1c3a0a;
+  --color-cta-green: #2d5016;
+  --color-accent-orange: #c4521a;
+  --color-text-muted: #4a5240;
+  --color-text-placeholder: #9c948a;
+  --color-white: #ffffff;
+  --color-badge-bg: #ede8dc;
+  --color-border-card: #ddd5c7;
+  --color-border-chip: #d1d5db;
+  --color-icon-border: #8a9e72;
+  --color-cta-text: #f5f0e8;
+  --color-shadow: #00000014;
+  --color-focus: #4a90e2;
+  --color-hero-overlay: rgba(28, 58, 10, 0.28);
+  --color-sage-green: #6b8e5a;
+  --color-badge-green: #ebf5ee;
+  --color-bg-band: #f4efe6;
+}
+
+/* Structure */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Geist", Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* a blue outline as a generic focus style */
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  width: 100%;
+  background-color: var(--color-bg-navbar);
+  border-bottom: 1px solid var(--color-border-navbar);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-mark {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-green);
+  border-radius: 4px;
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.logo-text {
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-primary-green);
+}
+
+.nav-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: "Geist", Helvetica;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-primary-green);
+}
+
+.nav-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: 1px solid var(--color-border-navbar);
+}
+
+.search-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.search-placeholder {
+  font-family: "Geist", Helvetica;
+  font-size: 13px;
+  color: var(--color-text-placeholder);
+}
+
+.cart-button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  background-color: var(--color-primary-green);
+  border-radius: 10px;
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--color-white);
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--color-primary-green);
+  border-radius: 2px;
+}
+
+.nav-link--active {
+  font-weight: 700;
+  color: var(--color-accent-orange);
+}
+
+/* Sell Hero */
+.sell-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 80px;
+  width: 100%;
+}
+
+.sell-hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-height: 380px;
+  padding: 56px 64px;
+  width: 100%;
+  background: linear-gradient(var(--color-primary-green), var(--color-cta-green));
+  border-radius: 8px;
+}
+
+.sell-hero-title {
+  max-width: 620px;
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  color: var(--color-white);
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.sell-hero-desc {
+  max-width: 620px;
+  font-family: "Geist", Helvetica;
+  color: var(--color-cta-text);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.sell-hero-button {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 12px 24px;
+  background-color: var(--color-accent-orange);
+  border-radius: 4px;
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+/* How Reselling Works */
+.section--how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 48px 80px;
+  width: 100%;
+  background-color: var(--color-bg-band);
+}
+
+.section-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 28px;
+}
+
+.section-subtitle {
+  max-width: 540px;
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+/* white circle behind each step icon, with the orange
+   number badge sitting on its top-right corner */
+.step-icon-wrap {
+  position: relative;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border-radius: 32px;
+  color: var(--color-primary-green);
+  box-shadow: 0px 4px 12px var(--color-shadow);
+}
+
+.step-icon-wrap svg {
+  width: 28px;
+  height: 28px;
+}
+
+.step-number {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-accent-orange);
+  border-radius: 11px;
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--color-white);
+}
+
+.step-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 18px;
+}
+
+.step-desc {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Listing Form */
+.section--listing {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 64px 80px;
+  width: 100%;
+}
+
+.listing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.form-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 24px;
+}
+
+.form-desc {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+/* two fields side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-primary-green);
+  font-size: 14px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: 1px solid var(--color-border-card);
+  font-family: "Geist", Helvetica;
+  color: var(--color-primary-green);
+  font-size: 14px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-placeholder);
+  opacity: 1;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* the $ sits inside the price box */
+.price-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 12px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: 1px solid var(--color-border-card);
+}
+
+.price-symbol {
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-primary-green);
+  font-size: 14px;
+}
+
+.price-input-wrap .form-input {
+  padding-left: 0;
+  border: none;
+}
+
+.form-submit {
+  margin-top: 12px;
+  padding: 14px;
+  width: 100%;
+  background-color: var(--color-primary-green);
+  border-radius: 6px;
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Upload + Tips sidebar */
+.sell-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 0 0 440px;
+}
+
+.upload-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 18px;
+}
+
+.upload-desc {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 226px;
+  margin-top: 16px;
+  padding: 24px;
+  background-color: var(--color-bg-band);
+  border-radius: 8px;
+  border: 2px dashed var(--color-border-card);
+  text-align: center;
+}
+
+.upload-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 6px;
+  color: var(--color-icon-border);
+}
+
+.upload-text {
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-primary-green);
+  font-size: 14px;
+}
+
+.upload-hint {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-placeholder);
+  font-size: 12px;
+}
+
+/* "Browse Files" is a label for the hidden file input,
+   so clicking it opens the file picker without any JS */
+.upload-button {
+  margin-top: 10px;
+  padding: 6px 16px;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  border: 1px solid var(--color-border-card);
+  font-family: "Geist", Helvetica;
+  font-weight: 600;
+  color: var(--color-primary-green);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.upload-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.tips-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--color-bg-navbar);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-card);
+}
+
+.tips-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 15px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip {
+  display: flex;
+  gap: 8px;
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.tip-number {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--color-accent-orange);
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 64px 80px 40px;
+  width: 100%;
+  background-color: var(--color-badge-bg);
+  border-top: 1px solid var(--color-border-card);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  gap: 16px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-mark {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-green);
+  border-radius: 4px;
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--color-white);
+}
+
+.footer-logo-text {
+  font-family: "Geist", Helvetica;
+  font-weight: 800;
+  color: var(--color-primary-green);
+  font-size: 18px;
+}
+
+.footer-desc {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+/* each social link is a plain colored circle with the platform's
+   initials in it - no icon file, no svg */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  font-size: 11px;
+  transition: background-color 0.15s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--color-cta-green);
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 32px 48px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.footer-col-title {
+  font-family: "Geist", Helvetica;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  font-size: 14px;
+}
+
+.footer-col-links {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  width: 100%;
+  border-top: 1px solid var(--color-border-card);
+}
+
+.footer-copyright {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-placeholder);
+  font-size: 12px;
+}
+
+.footer-legal-links {
+  display: inline-flex;
+  gap: 24px;
+}
+
+.footer-legal-link {
+  font-family: "Geist", Helvetica;
+  color: var(--color-text-placeholder);
+  font-size: 12px;
+}
+
+/* Responsive Design */
+/* Tablet */
+@media (max-width: 1024px) {
+  .site-header,
+  .sell-hero,
+  .section--how-it-works,
+  .section--listing,
+  .site-footer {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .site-header {
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  /* hamburger takes over the nav */
+  .nav-toggle {
+    display: flex;
+    order: 2;
+  }
+
+  .nav-actions {
+    order: 3;
+    width: 100%;
+  }
+
+  .search-box {
+    flex: 1;
+  }
+
+  .nav-links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border-navbar);
+  }
+
+  .sell-hero-title {
+    font-size: 40px;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  /* upload + tips drop below the form */
+  .section--listing {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sell-sidebar {
+    flex: none;
+  }
+}
+
+/* Tablet portrait / large mobile */
+@media (max-width: 768px) {
+  .sell-hero,
+  .section--how-it-works,
+  .section--listing,
+  .site-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .sell-hero {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .sell-hero-card {
+    min-height: 0;
+    padding: 40px 24px;
+  }
+
+  .sell-hero-title {
+    font-size: 30px;
+  }
+
+  .sell-hero-desc {
+    font-size: 16px;
+  }
+
+  .section--listing {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-columns {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .site-header,
+  .sell-hero,
+  .section--how-it-works,
+  .section--listing,
+  .site-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .sell-hero-title {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .sell-hero-button {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* stack the paired fields */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-columns {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-col {
+    max-width: none;
+  }
+}

@@ -1,4 +1,3 @@
-// Associative arrays: key = destination name, value = Google Maps embed URL
 const mountains = [];
 mountains["Asheville"] = "https://maps.google.com/maps?q=Asheville,+NC&output=embed";
 mountains["Boone"] = "https://maps.google.com/maps?q=Boone,+NC&output=embed";
@@ -19,6 +18,7 @@ typeSelect.onchange = () => {
     list.innerHTML = "";
     map.classList.add("hidden");
 
+    // Choose which array to use
     let destinations;
     if (typeSelect.value === "mountains") {
         destinations = mountains;
@@ -28,12 +28,14 @@ typeSelect.onchange = () => {
         return;
     }
 
+    // Make a link for each destination in the array
     for (let name in destinations) {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = "#";
         a.innerHTML = name;
 
+        // Show the map for this destination when clicked
         a.onclick = (e) => {
             e.preventDefault();
             map.src = destinations[name];

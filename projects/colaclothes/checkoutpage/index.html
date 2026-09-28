@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cola Clothes - Checkout</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="nav.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="../homepage/index.html">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Cola Clothes</span>
+      </a>
+
+      <!-- hamburger button, only shows on small screens -->
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link" href="../shopallpage/index.html">Shop All</a>
+        <a class="nav-link" href="../apparelpage/index.html">Apparel</a>
+        <a class="nav-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
+        <a class="nav-link" href="../sellpage/index.html">Sell</a>
+        <a class="nav-link" href="../aboutpage/index.html">About Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <img class="search-icon" src="../homepage/images/icons/icon-search.png" alt="" aria-hidden="true" />
+          <span class="search-placeholder">Search gear...</span>
+        </div>
+
+        <a class="cart-button" href="index.html" aria-label="Cart, 2 items">
+          <img class="cart-icon" src="../homepage/images/icons/icon-cart.png" alt="" aria-hidden="true" />
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Checkout -->
+      <section class="section--checkout">
+        <form class="checkout-main" id="checkout-form" action="#">
+          <div class="checkout-head">
+            <h1 class="checkout-title">Secured Checkout</h1>
+            <p class="checkout-subtitle">Review your gear, confirm your trail-ready details, and get your secondhand finds on their way.</p>
+          </div>
+
+          <!-- Shipping Address -->
+          <fieldset class="checkout-card">
+            <legend class="checkout-card-title">Shipping Address</legend>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="first-name">First Name</label>
+                <input class="form-input" id="first-name" type="text" placeholder="Avery" autocomplete="given-name" />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input class="form-input" id="last-name" type="text" placeholder="Reed" autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="address">Address</label>
+              <input class="form-input" id="address" type="text" placeholder="1201 Main St, Apt 4B" autocomplete="street-address" />
+            </div>
+
+            <div class="form-row form-row--three">
+              <div class="form-field">
+                <label class="form-label" for="city">City</label>
+                <input class="form-input" id="city" type="text" placeholder="Columbia" autocomplete="address-level2" />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="state">State</label>
+                <input class="form-input" id="state" type="text" placeholder="SC" autocomplete="address-level1" />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="zip">ZIP Code</label>
+                <input class="form-input" id="zip" type="text" placeholder="29201" inputmode="numeric" autocomplete="postal-code" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Payment Method -->
+          <fieldset class="checkout-card">
+            <legend class="checkout-card-title">Payment Method</legend>
+
+            <div class="form-field">
+              <label class="form-label" for="card-name">Cardholder Name</label>
+              <input class="form-input" id="card-name" type="text" placeholder="Avery Reed" autocomplete="cc-name" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="card-number">Card Number</label>
+              <input class="form-input" id="card-number" type="text" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" inputmode="numeric" autocomplete="cc-number" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="card-expiry">Expiry Date</label>
+                <input class="form-input" id="card-expiry" type="text" placeholder="12 / 28" autocomplete="cc-exp" />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="card-cvv">CVV</label>
+                <input class="form-input" id="card-cvv" type="text" placeholder="&bull;&bull;&bull;" inputmode="numeric" autocomplete="cc-csc" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+          <h2 class="summary-title">Order Summary</h2>
+
+          <div class="summary-items">
+            <div class="summary-item">
+              <img class="summary-item-image" src="images/puffer-jacket.jpg" alt="Black Diamond Forged Denim Jacket" />
+              <div class="summary-item-info">
+                <div class="summary-item-name">Black Diamond Forged Denim Jacket</div>
+                <div class="summary-item-meta">Black Diamond &middot; SIZE M &middot; Used</div>
+                <div class="summary-item-actions">
+                  <span>Qty: 1</span>
+                  <a class="summary-item-remove" href="#">Remove</a>
+                </div>
+              </div>
+              <div class="summary-item-price">$95.00</div>
+            </div>
+
+            <div class="summary-item">
+              <img class="summary-item-image" src="images/trail-shoes.jpg" alt="Salomon Quest 4D 3 GTX Boots" />
+              <div class="summary-item-info">
+                <div class="summary-item-name">Salomon Quest 4D 3 GTX Boots</div>
+                <div class="summary-item-meta">Salomon &middot; SIZE 9 &middot; Used</div>
+                <div class="summary-item-actions">
+                  <span>Qty: 1</span>
+                  <a class="summary-item-remove" href="#">Remove</a>
+                </div>
+              </div>
+              <div class="summary-item-price">$78.00</div>
+            </div>
+          </div>
+
+          <div class="promo-form">
+            <label class="visually-hidden" for="promo-code">Promo code</label>
+            <input class="form-input" id="promo-code" type="text" placeholder="Promo code" />
+            <button class="promo-button" type="button">Apply</button>
+          </div>
+
+          <div class="summary-totals">
+            <div class="summary-row"><span>Subtotal</span><span>$173.00</span></div>
+            <div class="summary-row"><span>Shipping</span><span>$5.99</span></div>
+            <div class="summary-row"><span>Estimated Tax</span><span>$12.11</span></div>
+            <div class="summary-row summary-row--total"><span>Total</span><span>$191.10</span></div>
+          </div>
+
+          <!-- form="" ties this button to the checkout form on the left -->
+          <button class="place-order-button" type="submit" form="checkout-form">Place Order</button>
+        </aside>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">C</div>
+            <span class="footer-logo-text">Cola Clothes</span>
+          </div>
+          <p class="footer-desc">Giving outdoor gear another adventure. Buy and sell pre-loved hiking, camping, and climbing gear with ease in Columbia, South Carolina</p>
+
+          <!-- social links -->
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter / X">X</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <div class="footer-col-title">Shop</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="../shopallpage/index.html">All Gear</a>
+              <a class="footer-link" href="../apparelpage/index.html">Apparel</a>
+              <a class="footer-link" href="../gearandequipmentpage/index.html">Gear &amp; Equipment</a>
+              <a class="footer-link" href="#">Accessories</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Sell</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="../sellpage/index.html">Start Selling</a>
+              <a class="footer-link" href="#">Seller Guidelines</a>
+              <a class="footer-link" href="#">Payout Methods</a>
+              <a class="footer-link" href="#">Shipping Labels</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <div class="footer-col-title">Support</div>
+            <div class="footer-col-links">
+              <a class="footer-link" href="#">Help Center</a>
+              <a class="footer-link" href="#">Safe Buying</a>
+              <a class="footer-link" href="#">Contact Us</a>
+              <a class="footer-link" href="#">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Cola Clothes Co. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a class="footer-legal-link" href="#">Privacy Policy</a>
+          <a class="footer-legal-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
