@@ -140,14 +140,14 @@ class Product {
 
 const products = [];
 
-products.push(new Product("3-Season Tent (2P)", "REI Co-op", "$150.00", "Sleeps 2", "Like New", "tent.jpg"));
-products.push(new Product("0°F Down Sleeping Bag", "REI Co-op", "$110.00", "Regular", "Excellent", "sleeping-bag.jpg"));
-products.push(new Product("Inflatable Sleeping Pad", "Therm-a-Rest", "$58.00", "Regular", "Very Good", "sleeping-pad.jpg"));
-products.push(new Product("65L Backpacking Pack", "Osprey", "$120.00", "One Size", "Excellent", "backpack.jpg"));
-products.push(new Product("Approach Shoes", "La Sportiva", "$85.00", "Size 7", "Good", "approach-shoes.jpg"));
-products.push(new Product("2-Burner Camp Stove", "Coleman", "$40.00", "Standard", "Like New", "camp-stove.jpg"));
-products.push(new Product("Climbing Harness", "Black Diamond", "$45.00", "Size M", "Very Good", "climbing-harness.jpg"));
-products.push(new Product("Trekking Poles (Pair)", "Black Diamond", "$32.00", "Adjustable", "Excellent", "trekking-poles.jpg"));
+products.push(new Product("Flannel Shirt Jacket", "Patagonia", "$42.00", "Size L", "Excellent", "flannel-shirt.jpg"));
+products.push(new Product("Down Insulated Jacket", "Patagonia", "$95.00", "Size M", "Very Good", "down-jacket.jpg"));
+products.push(new Product("Waterproof Hiking Boots", "Salomon", "$78.00", "Size 9", "Like New", "hiking-boots.jpg"));
+products.push(new Product("Fleece Half-Zip Pullover", "Patagonia", "$45.00", "Size Xl", "Good", "fleece-pullover.jpg"));
+products.push(new Product("Duck Canvas Chore Jacket", "Carhartt", "$75.00", "Size L", "Very Good", "chore-jacket.jpg"));
+products.push(new Product("Ripstop Cargo Hiking Pants", "Prana", "$32.00", "Size 34", "Good", "cargo-pants.jpg"));
+products.push(new Product("Quick-Dry Trail Tee", "Smartwool", "$26.00", "Size M", "Worn In", "trail-tee.jpg"));
+products.push(new Product("Down Belay Parka", "The North Face", "$135.00", "Size M", "Excellent", "belay-parka.jpg"));
 
 const productGrid = document.querySelector(".product-grid");
 

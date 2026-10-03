@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styles.css" />
     <script src="nav.js" defer></script>
+    <script src="products.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -86,146 +87,19 @@
         </div>
 
         <div class="product-grid">
-            <!-- first item opens the product preview page -->
-            <a class="product-card" href="../productpage/index.html">
-              <img class="product-image" src="images/tent.jpg" alt="3-Season Tent (2P)" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">3-Season Tent (2P)</div>
-                  <div class="product-brand">REI Co-op</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$150.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SLEEPS 2</div>
-                    <div class="product-badge product-badge--condition">LIKE NEW</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <article class="product-card">
-              <img class="product-image" src="images/sleeping-bag.jpg" alt="0°F Down Sleeping Bag" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">0&deg;F Down Sleeping Bag</div>
-                  <div class="product-brand">REI Co-op</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$110.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">REGULAR</div>
-                    <div class="product-badge product-badge--condition">EXCELLENT</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/sleeping-pad.jpg" alt="Inflatable Sleeping Pad" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Inflatable Sleeping Pad</div>
-                  <div class="product-brand">Therm-a-Rest</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$58.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">REGULAR</div>
-                    <div class="product-badge product-badge--condition">VERY GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/backpack.jpg" alt="65L Backpacking Pack" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">65L Backpacking Pack</div>
-                  <div class="product-brand">Osprey</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$120.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">ONE SIZE</div>
-                    <div class="product-badge product-badge--condition">EXCELLENT</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/approach-shoes.jpg" alt="Approach Shoes" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Approach Shoes</div>
-                  <div class="product-brand">La Sportiva</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$85.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE 7</div>
-                    <div class="product-badge product-badge--condition">GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/camp-stove.jpg" alt="2-Burner Camp Stove" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">2-Burner Camp Stove</div>
-                  <div class="product-brand">Coleman</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$40.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">STANDARD</div>
-                    <div class="product-badge product-badge--condition">LIKE NEW</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/climbing-harness.jpg" alt="Climbing Harness" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Climbing Harness</div>
-                  <div class="product-brand">Black Diamond</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$45.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE M</div>
-                    <div class="product-badge product-badge--condition">VERY GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/trekking-poles.jpg" alt="Trekking Poles (Pair)" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Trekking Poles (Pair)</div>
-                  <div class="product-brand">Black Diamond</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$32.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">ADJUSTABLE</div>
-                    <div class="product-badge product-badge--condition">EXCELLENT</div>
-                  </div>
-                </div>
-              </div>
-            </article>
+          <!-- product cards are added here by products.js -->
         </div>
       </section>
 
     </main>
+
+    <!-- Product popup (filled in by products.js) -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="modal-close" id="close" type="button" aria-label="Close">&times;</button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">

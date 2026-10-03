@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styles.css" />
     <script src="nav.js" defer></script>
+    <script src="products.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -72,146 +73,19 @@
         </div>
 
         <div class="product-grid">
-            <!-- first item opens the product preview page -->
-            <a class="product-card" href="../productpage/index.html">
-              <img class="product-image" src="images/flannel-shirt.jpg" alt="Flannel Shirt Jacket" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Flannel Shirt Jacket</div>
-                  <div class="product-brand">Patagonia</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$42.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE L</div>
-                    <div class="product-badge product-badge--condition">EXCELLENT</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <article class="product-card">
-              <img class="product-image" src="images/down-jacket.jpg" alt="Down Insulated Jacket" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Down Insulated Jacket</div>
-                  <div class="product-brand">Patagonia</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$95.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE M</div>
-                    <div class="product-badge product-badge--condition">VERY GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/hiking-boots.jpg" alt="Waterproof Hiking Boots" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Waterproof Hiking Boots</div>
-                  <div class="product-brand">Salomon</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$78.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE 9</div>
-                    <div class="product-badge product-badge--condition">LIKE NEW</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/fleece-pullover.jpg" alt="Fleece Half-Zip Pullover" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Fleece Half-Zip Pullover</div>
-                  <div class="product-brand">Patagonia</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$45.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE XL</div>
-                    <div class="product-badge product-badge--condition">GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/chore-jacket.jpg" alt="Duck Canvas Chore Jacket" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Duck Canvas Chore Jacket</div>
-                  <div class="product-brand">Carhartt</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$75.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE L</div>
-                    <div class="product-badge product-badge--condition">VERY GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/cargo-pants.jpg" alt="Ripstop Cargo Hiking Pants" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Ripstop Cargo Hiking Pants</div>
-                  <div class="product-brand">Prana</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$32.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE 34</div>
-                    <div class="product-badge product-badge--condition">GOOD</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/trail-tee.jpg" alt="Quick-Dry Trail Tee" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Quick-Dry Trail Tee</div>
-                  <div class="product-brand">Smartwool</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$26.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE M</div>
-                    <div class="product-badge product-badge--condition">WORN IN</div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img class="product-image" src="images/belay-parka.jpg" alt="Down Belay Parka" />
-              <div class="product-body">
-                <div class="product-info">
-                  <div class="product-name">Down Belay Parka</div>
-                  <div class="product-brand">The North Face</div>
-                </div>
-                <div class="product-meta">
-                  <div class="product-price">$135.00</div>
-                  <div class="product-badges">
-                    <div class="product-badge">SIZE M</div>
-                    <div class="product-badge product-badge--condition">EXCELLENT</div>
-                  </div>
-                </div>
-              </div>
-            </article>
+          <!-- product cards are added here by products.js -->
         </div>
       </section>
 
     </main>
+
+    <!-- Product popup (filled in by products.js) -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="modal-close" id="close" type="button" aria-label="Close">&times;</button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">

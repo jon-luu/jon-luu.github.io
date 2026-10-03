@@ -140,14 +140,14 @@ class Product {
 
 const products = [];
 
-products.push(new Product("3-Season Tent (2P)", "REI Co-op", "$150.00", "Sleeps 2", "Like New", "tent.jpg"));
-products.push(new Product("0°F Down Sleeping Bag", "REI Co-op", "$110.00", "Regular", "Excellent", "sleeping-bag.jpg"));
-products.push(new Product("Inflatable Sleeping Pad", "Therm-a-Rest", "$58.00", "Regular", "Very Good", "sleeping-pad.jpg"));
-products.push(new Product("65L Backpacking Pack", "Osprey", "$120.00", "One Size", "Excellent", "backpack.jpg"));
-products.push(new Product("Approach Shoes", "La Sportiva", "$85.00", "Size 7", "Good", "approach-shoes.jpg"));
-products.push(new Product("2-Burner Camp Stove", "Coleman", "$40.00", "Standard", "Like New", "camp-stove.jpg"));
-products.push(new Product("Climbing Harness", "Black Diamond", "$45.00", "Size M", "Very Good", "climbing-harness.jpg"));
-products.push(new Product("Trekking Poles (Pair)", "Black Diamond", "$32.00", "Adjustable", "Excellent", "trekking-poles.jpg"));
+products.push(new Product("Patagonia Tres 3-in-1 Parka", "Patagonia", "$95.00", "Size M", "Excellent", "patagonia-parka.jpg"));
+products.push(new Product("Salomon Quest 4D 3 GTX Boots", "Salomon", "$78.00", "Size 9", "Excellent", "salomon-boots.jpg"));
+products.push(new Product("Patagonia R1 Pullover", "Patagonia", "$42.00", "Size L", "Good", "patagonia-r1.jpg"));
+products.push(new Product("REI Co-op Half Dome 2 Plus Tent", "REI Co-op", "$150.00", "Sleeps 2", "Like New", "rei-tent.jpg"));
+products.push(new Product("Smartwool Merino 150 Base Layer", "Smartwool", "$28.00", "Size L", "Worn In", "smartwool-base.jpg"));
+products.push(new Product("Prana Stretch Zion Convertible Pants", "Prana", "$35.00", "Size 30", "Very Good", "prana-pants.jpg"));
+products.push(new Product("Osprey Atmos 65L Backpack", "Osprey", "$95.00", "65L", "Excellent", "osprey-pack.jpg"));
+products.push(new Product("Carhartt WIP Detroit Jacket", "Carhartt WIP", "$65.00", "Size M", "Good", "carhartt-jacket.jpg"));
 
 const productGrid = document.querySelector(".product-grid");
 
