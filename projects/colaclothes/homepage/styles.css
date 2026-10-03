@@ -411,9 +411,10 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin: 0 80px;
   padding: 80px;
-  width: 100%;
-  background-color: var(--color-bg-page);
+  background-color: var(--color-accent-orange);
+  border-radius: 16px;
 }
 
 .section-intro {
@@ -431,17 +432,20 @@ button:focus-visible {
   gap: 8px;
 }
 
-/* small orange sparkle icon on either side of the "HOW IT WORKS" label */
+/* small sparkle icon on either side of the "HOW IT WORKS" label,
+   turned white so it shows up on the orange background */
 .flourish {
   width: 14px;
   height: 14px;
+  filter: brightness(0) invert(1);
 }
 
 .eyebrow {
   font-family: "Outfit", Helvetica;
   font-weight: 600;
-  color: var(--color-accent-orange);
+  color: var(--color-white);
   font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .how-it-works-title {
@@ -449,7 +453,7 @@ button:focus-visible {
   max-width: 640px;
   font-family: "Outfit", Helvetica;
   font-weight: 800;
-  color: var(--color-primary-green);
+  color: var(--color-white);
   font-size: 44px;
   text-align: center;
   line-height: 48.4px;
@@ -459,7 +463,7 @@ button:focus-visible {
   width: 100%;
   max-width: 520px;
   font-family: "Outfit", Helvetica;
-  color: var(--color-text-muted);
+  color: var(--color-white);
   font-size: 17px;
   text-align: center;
   line-height: 27.2px;
@@ -493,7 +497,7 @@ button:focus-visible {
   justify-content: center;
   background-color: var(--color-badge-bg);
   border-radius: 36px;
-  border: 2px solid var(--color-icon-border);
+  border: 2px solid var(--color-white);
   box-shadow: 0px 4px 12px var(--color-shadow);
 }
 
@@ -519,7 +523,7 @@ button:focus-visible {
   position: absolute;
   top: -6px;
   right: -6px;
-  background-color: var(--color-accent-orange);
+  background-color: var(--color-primary-green);
   border-radius: 12px;
   font-family: "Outfit", Helvetica;
   font-weight: 800;
@@ -538,14 +542,14 @@ button:focus-visible {
 .step-title {
   font-family: "Outfit", Helvetica;
   font-weight: 700;
-  color: var(--color-primary-green);
+  color: var(--color-white);
   font-size: 20px;
   text-align: center;
 }
 
 .step-desc {
   font-family: "Outfit", Helvetica;
-  color: var(--color-text-muted);
+  color: var(--color-white);
   font-size: 14px;
   text-align: center;
   line-height: 22.4px;
@@ -559,7 +563,7 @@ button:focus-visible {
   gap: 16px;
   padding: 20px 32px;
   width: 100%;
-  background-color: var(--color-cta-green);
+  background-color: var(--color-primary-green);
   border-radius: 12px;
 }
 
@@ -872,6 +876,12 @@ button:focus-visible {
 /* Responsive Design */
 /* Tablet */
 @media (max-width: 1024px) {
+  /* keep the orange box lined up with the rest of the page */
+  .section--how-it-works {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+
   .site-header,
   .hero,
   .section--featured,
@@ -958,6 +968,12 @@ button:focus-visible {
 
 /* Tablet portrait / large mobile */
 @media (max-width: 768px) {
+  /* keep the orange box lined up with the rest of the page */
+  .section--how-it-works {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
   .hero,
   .section--featured,
   .section--how-it-works,
@@ -1033,6 +1049,13 @@ button:focus-visible {
 
 /* Mobile */
 @media (max-width: 480px) {
+  /* keep the orange box lined up with the rest of the page */
+  .section--how-it-works {
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 12px;
+  }
+
   .site-header,
   .hero,
   .section--featured,
