@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f1f1ea;
+}
+
+h1 {
+    color: #5a6b8c;
+}
+
+h2 {
+    color: #e08a7a;
+}
+
+.vacations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.vacation {
+    background: #4a5fa8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.vacation h3 {
+    margin: 10px 0 5px;
+}
+
+.vacation p {
+    margin: 0 0 10px;
+    font-size: 12px;
+}
+
+.vacation img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.w3-modal-content {
+    background: #d6e2f3;
+}
+
+#modal-body {
+    display: flex;
+    gap: 15px;
+    padding: 30px 0 20px;
+    text-align: left;
+    color: #4a5fa8;
+}
+
+#modal-body iframe {
+    width: 50%;
+    height: 250px;
+    border: 0;
+}
