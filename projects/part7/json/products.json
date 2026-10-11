@@ -1,0 +1,90 @@
+[
+  {
+    "_id": 1,
+    "name": "Patagonia Tres 3-in-1 Parka",
+    "brand": "Patagonia",
+    "price": "$95.00",
+    "size": "Size M",
+    "condition": "Excellent",
+    "category": "Apparel",
+    "description": "Waterproof shell with a zip-out down jacket, so it works from fall rain to winter cold.",
+    "img_name": "images/patagonia-parka.jpg"
+  },
+  {
+    "_id": 2,
+    "name": "Salomon Quest 4D 3 GTX Boots",
+    "brand": "Salomon",
+    "price": "$78.00",
+    "size": "Size 9",
+    "condition": "Excellent",
+    "category": "Footwear",
+    "description": "Gore-Tex backpacking boots with strong ankle support and plenty of tread left.",
+    "img_name": "images/salomon-boots.jpg"
+  },
+  {
+    "_id": 3,
+    "name": "Patagonia R1 Pullover",
+    "brand": "Patagonia",
+    "price": "$42.00",
+    "size": "Size L",
+    "condition": "Good",
+    "category": "Apparel",
+    "description": "Breathable grid fleece made for layering on cool hikes and climbs.",
+    "img_name": "images/patagonia-r1.jpg"
+  },
+  {
+    "_id": 4,
+    "name": "REI Co-op Half Dome 2 Plus Tent",
+    "brand": "REI Co-op",
+    "price": "$150.00",
+    "size": "Sleeps 2",
+    "condition": "Like New",
+    "category": "Gear",
+    "description": "Roomy two-person backpacking tent with two doors and two vestibules.",
+    "img_name": "images/rei-tent.jpg"
+  },
+  {
+    "_id": 5,
+    "name": "Smartwool Merino 150 Base Layer",
+    "brand": "Smartwool",
+    "price": "$28.00",
+    "size": "Size L",
+    "condition": "Worn In",
+    "category": "Apparel",
+    "description": "Lightweight merino wool base layer that stays warm and resists odor.",
+    "img_name": "images/smartwool-base.jpg"
+  },
+  {
+    "_id": 6,
+    "name": "Prana Stretch Zion Convertible Pants",
+    "brand": "Prana",
+    "price": "$35.00",
+    "size": "Size 30",
+    "condition": "Very Good",
+    "category": "Apparel",
+    "description": "Stretchy hiking pants that zip off into shorts when the day warms up.",
+    "img_name": "images/prana-pants.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "Osprey Atmos 65L Backpack",
+    "brand": "Osprey",
+    "price": "$95.00",
+    "size": "65L",
+    "condition": "Excellent",
+    "category": "Gear",
+    "description": "Ventilated suspended-mesh back panel, built for multi-day trips.",
+    "img_name": "images/osprey-pack.jpg"
+  },
+  {
+    "_id": 8,
+    "name": "Carhartt WIP Detroit Jacket",
+    "brand": "Carhartt WIP",
+    "price": "$65.00",
+    "size": "Size M",
+    "condition": "Good",
+    "category": "Apparel",
+    "description": "Classic canvas work jacket with a blanket lining and corduroy collar.",
+    "img_name": "images/carhartt-jacket.jpg"
+  }
+]
