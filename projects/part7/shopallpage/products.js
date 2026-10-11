@@ -35,7 +35,7 @@ class Product {
   productImage() {
     const img = document.createElement("img");
     img.classList.add("product-image");
-    img.src = `images/${this.pic}`;
+    img.src = this.pic;
     img.alt = this.name;
     return img;
   }
@@ -100,7 +100,7 @@ class Product {
   //picture on the left side of the popup
   modalImage() {
     const img = document.createElement("img");
-    img.src = `images/${this.pic}`;
+    img.src = this.pic;
     img.alt = this.name;
     return img;
   }
@@ -138,22 +138,38 @@ class Product {
   }
 }
 
-const products = [];
+//the product list now lives in a json file on github
+const getProducts = async () => {
+  const url = "https://jon-luu.github.io/projects/part7/json/products.json";
 
-products.push(new Product("Patagonia Tres 3-in-1 Parka", "Patagonia", "$95.00", "Size M", "Excellent", "patagonia-parka.jpg"));
-products.push(new Product("Salomon Quest 4D 3 GTX Boots", "Salomon", "$78.00", "Size 9", "Excellent", "salomon-boots.jpg"));
-products.push(new Product("Patagonia R1 Pullover", "Patagonia", "$42.00", "Size L", "Good", "patagonia-r1.jpg"));
-products.push(new Product("REI Co-op Half Dome 2 Plus Tent", "REI Co-op", "$150.00", "Sleeps 2", "Like New", "rei-tent.jpg"));
-products.push(new Product("Smartwool Merino 150 Base Layer", "Smartwool", "$28.00", "Size L", "Worn In", "smartwool-base.jpg"));
-products.push(new Product("Prana Stretch Zion Convertible Pants", "Prana", "$35.00", "Size 30", "Very Good", "prana-pants.jpg"));
-products.push(new Product("Osprey Atmos 65L Backpack", "Osprey", "$95.00", "65L", "Excellent", "osprey-pack.jpg"));
-products.push(new Product("Carhartt WIP Detroit Jacket", "Carhartt WIP", "$65.00", "Size M", "Good", "carhartt-jacket.jpg"));
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-const productGrid = document.querySelector(".product-grid");
+//read the json and build a card for each product
+const showProducts = async () => {
+  const productGrid = document.querySelector(".product-grid");
+  const products = await getProducts();
 
-products.forEach((product) => {
-  productGrid.append(product.item);
-});
+  if (!products) {
+    const message = document.createElement("p");
+    message.classList.add("product-error");
+    message.textContent = "Sorry, we couldn't load the products right now. Please try again later.";
+    productGrid.append(message);
+    return;
+  }
+
+  products.forEach((p) => {
+    const product = new Product(p.name, p.brand, p.price, p.size, p.condition, p.img_name);
+    productGrid.append(product.item);
+  });
+};
+
+showProducts();
 
 //close the popup
 document.getElementById("close").onclick = () => {
